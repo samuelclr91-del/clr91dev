@@ -26,6 +26,13 @@
             }
         });
 
+        document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+            const key = element.dataset.i18nAriaLabel;
+            if (translations[language]?.[key]) {
+                element.setAttribute("aria-label", translations[language][key]);
+            }
+        });
+
         document.querySelectorAll("[data-localized-image]").forEach((image) => {
             const localizedSource = image.dataset[`src${language[0].toUpperCase()}${language.slice(1)}`];
             if (localizedSource) image.src = localizedSource;

@@ -90,6 +90,41 @@ img {
     gap: 36px;
 }
 
+.header-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: none;
+}
+
+.home-link {
+    min-height: 38px;
+    padding: 0 14px 0 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .72);
+    color: #4e5b6c;
+    font-size: 12px;
+    font-weight: 690;
+    transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.home-link > span:first-child {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
+    border-color: rgba(8, 127, 245, .34);
+    background: #eaf4ff;
+    color: var(--blue-deep);
+    transform: translateX(-2px);
+}
+
 .trackle-brand {
     display: inline-flex;
     align-items: center;
@@ -524,27 +559,9 @@ img {
 .service-icon {
     width: 54px;
     height: 54px;
-    display: grid;
-    place-items: center;
     border-radius: 16px;
-    font-size: 24px;
-    font-weight: 800;
-}
-
-.service-icon.spotify {
-    background: #1ed760;
-    color: #07150b;
-}
-
-.service-icon.netflix {
-    background: #080808;
-    color: #e50914;
-    font-family: Georgia, serif;
-}
-
-.service-icon.chatgpt {
-    background: #f5f5f5;
-    color: #111;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
 }
 
 .renewal-card div:nth-child(2) {
@@ -1034,6 +1051,14 @@ footer {
     line-height: 1.65;
 }
 
+.footer-inner > div > .trademark-note {
+    max-width: 620px;
+    margin-top: 12px;
+    color: #8a93a1;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -1308,6 +1333,26 @@ footer {
     .header-inner {
         padding: 0 17px;
         gap: 14px;
+    }
+
+    .header-brand-group {
+        gap: 9px;
+    }
+
+    .home-link {
+        width: 36px;
+        min-height: 36px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .home-link-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
     }
 
     .trackle-brand {
