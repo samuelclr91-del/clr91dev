@@ -3,219 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trackle — Subscriptions, clearly understood</title>
-    <meta name="description" content="Track subscriptions, anticipate renewals and understand your spending with Trackle for iPhone.">
-    <meta name="theme-color" content="#ffffff">
+    <title>Trackle — Know what renews before it charges</title>
+    <meta name="description" content="Track subscriptions and recurring expenses, anticipate renewals and understand your spending with Trackle for iPhone and iPad.">
+    <meta name="theme-color" content="#f5f8fb">
     <link rel="canonical" href="https://samuelclr91-del.github.io/Trackle/trackle/">
 
-    <meta property="og:title" content="Trackle — Subscriptions, clearly understood">
-    <meta property="og:description" content="A calm, private place for subscriptions, renewals and spending.">
+    <meta property="og:title" content="Trackle — Know what renews before it charges">
+    <meta property="og:description" content="Subscriptions, recurring expenses and upcoming renewals, clearly organized on iPhone and iPad.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://samuelclr91-del.github.io/Trackle/trackle/">
     <meta property="og:image" content="https://samuelclr91-del.github.io/Trackle/assets/store/en/01-trackle-control.jpg">
 
     <link rel="icon" type="image/png" href="../assets/trackle-app-icon.png">
     <link rel="apple-touch-icon" href="../assets/trackle-app-icon.png">
-    <link rel="stylesheet" href="../assets/app-page.css">
+    <link rel="stylesheet" href="../assets/trackle-page.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Trackle",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "iOS, iPadOS",
+        "url": "https://samuelclr91-del.github.io/Trackle/trackle/",
+        "downloadUrl": "https://apps.apple.com/app/id6745257638",
+        "description": "Track subscriptions, recurring expenses and upcoming renewals on iPhone and iPad."
+    }
+    </script>
 </head>
-<body class="trackle-page">
+<body>
+    <a class="skip-link" href="#main" data-i18n="access.skip">Skip to content</a>
+
     <header class="site-header">
         <div class="header-inner">
-            <a class="brand" href="../" aria-label="Back to clr91dev">
-                <img src="../assets/clr91dev-mark-v2.png" alt="">
-                <span class="wordmark"><span>clr91</span><span>dev</span></span>
+            <a class="trackle-brand" href="#top" aria-label="Trackle home">
+                <img src="../assets/trackle-app-icon.png" alt="">
+                <span>Trackle</span>
             </a>
 
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a href="#why" data-i18n="nav.why">Why Trackle</a>
+                <a href="#features" data-i18n="nav.features">What it does</a>
+                <a href="#devices" data-i18n="nav.devices">iPhone + iPad</a>
+                <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+                <a href="#questions" data-i18n="nav.questions">Questions</a>
+            </nav>
+
             <div class="header-actions">
-                <a class="back-link" href="../">
-                    <span class="arrow" aria-hidden="true">←</span>
-                    <span data-i18n="nav.back">Back to portfolio</span>
-                </a>
                 <div class="language" aria-label="Language">
                     <button class="active" data-lang="en" aria-pressed="true">EN</button>
                     <button data-lang="es" aria-pressed="false">ES</button>
                 </div>
+                <a class="header-download" href="https://apps.apple.com/app/id6745257638" target="_blank" rel="noopener" data-i18n="nav.download">Download</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="app-hero">
-            <div class="app-heading">
-                <div class="app-identity">
-                    <img class="app-icon" src="../assets/trackle-app-icon.png" alt="Trackle">
-                    <div>
-                        <div class="app-name">Trackle</div>
-                        <div class="availability" data-i18n="hero.available">Available on the App Store</div>
-                    </div>
-                </div>
-
-                <p class="eyebrow" data-i18n="hero.eyebrow">Subscriptions, without the noise</p>
-                <h1 data-i18n="hero.title">Everything that renews. Finally clear.</h1>
-                <p class="hero-summary" data-i18n="hero.summary">Trackle brings subscriptions, recurring payments and upcoming renewals into one calm, private dashboard.</p>
+    <main id="main">
+        <section class="hero" id="top">
+            <div class="hero-copy" data-reveal>
+                <p class="eyebrow" data-i18n="hero.eyebrow">Your recurring payments, without surprises</p>
+                <h1 data-i18n="hero.title">Know what renews. Before it charges.</h1>
+                <p class="hero-summary" data-i18n="hero.summary">Trackle brings subscriptions, personal recurring expenses and upcoming renewals into one clear place—without connecting to your bank.</p>
 
                 <div class="hero-actions">
-                    <a class="button button-primary" href="https://apps.apple.com/app/id6745257638" target="_blank" rel="noopener" data-i18n="hero.download">Download on the App Store</a>
-                    <a class="button button-secondary" href="#screens" data-i18n="hero.screens">See real app screens</a>
+                    <a class="button button-primary" href="https://apps.apple.com/app/id6745257638" target="_blank" rel="noopener">
+                        <span class="apple-mark" aria-hidden="true"></span>
+                        <span data-i18n="hero.download">Download on the App Store</span>
+                    </a>
+                    <a class="button button-secondary" href="#features" data-i18n="hero.discover">See how it works</a>
+                </div>
+
+                <div class="hero-notes" aria-label="Key details">
+                    <span data-i18n="hero.note.one">For iPhone and iPad</span>
+                    <span data-i18n="hero.note.two">No bank connection</span>
+                    <span data-i18n="hero.note.three">Available in multiple languages</span>
                 </div>
             </div>
 
-            <figure class="hero-preview">
-                <img
-                    src="../assets/store/en/01-trackle-control.jpg"
-                    data-localized-image
-                    data-src-en="../assets/store/en/01-trackle-control.jpg"
-                    data-src-es="../assets/store/es/01-trackle-control.jpg"
-                    alt="Trackle subscriptions dashboard"
-                    fetchpriority="high"
-                >
-            </figure>
-        </section>
-
-        <section class="app-facts" aria-label="Trackle details">
-            <article class="fact">
-                <span data-i18n="facts.platform.label">Platform</span>
-                <strong data-i18n="facts.platform.value">iPhone</strong>
-            </article>
-            <article class="fact">
-                <span data-i18n="facts.focus.label">Focus</span>
-                <strong data-i18n="facts.focus.value">Subscriptions & recurring expenses</strong>
-            </article>
-            <article class="fact">
-                <span data-i18n="facts.privacy.label">Privacy</span>
-                <strong data-i18n="facts.privacy.value">Your data stays on your device</strong>
-            </article>
-        </section>
-
-        <section class="editorial">
-            <p class="section-label" data-i18n="features.label">Built for clarity</p>
-            <h2 data-i18n="features.title">Know what renews. Understand what you spend.</h2>
-
-            <div class="feature-list">
-                <article class="feature-row">
-                    <span>01</span>
-                    <h3 data-i18n="features.one.title">One dashboard</h3>
-                    <p data-i18n="features.one.text">See your active subscriptions, monthly total and next renewals without searching through receipts or settings.</p>
-                </article>
-                <article class="feature-row">
-                    <span>02</span>
-                    <h3 data-i18n="features.two.title">A visual calendar</h3>
-                    <p data-i18n="features.two.text">Understand when charges arrive and spot busy weeks before payments are made.</p>
-                </article>
-                <article class="feature-row">
-                    <span>03</span>
-                    <h3 data-i18n="features.three.title">Useful statistics</h3>
-                    <p data-i18n="features.three.text">Compare monthly and yearly spending and see which categories account for the most.</p>
-                </article>
-                <article class="feature-row">
-                    <span>04</span>
-                    <h3 data-i18n="features.four.title">A smart assistant</h3>
-                    <p data-i18n="features.four.text">Ask about renewals, costly services and possible savings through simple, focused cards.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="gallery" id="screens">
-            <div class="gallery-inner">
-                <div class="gallery-header">
-                    <p class="section-label" data-i18n="gallery.label">Real app screens</p>
-                    <h2 data-i18n="gallery.title">Trackle, from overview to insight.</h2>
+            <div class="hero-visual" aria-label="Trackle shown on iPhone and iPad" data-reveal>
+                <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+                <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+                <img class="hero-ipad" src="../assets/trackle/devices/ipad-home.png" alt="Trackle subscriptions dashboard on iPad" fetchpriority="high">
+                <img class="hero-iphone" src="../assets/trackle/devices/iphone-home.png" alt="Trackle subscriptions dashboard on iPhone" fetchpriority="high">
+                <div class="hero-float hero-float-total">
+                    <span data-i18n="hero.float.total">Monthly total</span>
+                    <strong>€46.98</strong>
                 </div>
-
-                <div class="gallery-grid">
-                    <article class="gallery-card">
-                        <div class="gallery-media">
-                            <img
-                                src="../assets/store/en/01-trackle-control.jpg"
-                                data-localized-image
-                                data-src-en="../assets/store/en/01-trackle-control.jpg"
-                                data-src-es="../assets/store/es/01-trackle-control.jpg"
-                                alt="Trackle dashboard"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="gallery-caption">
-                            <h3 data-i18n="gallery.one">Subscriptions</h3>
-                            <span>01</span>
-                        </div>
-                    </article>
-
-                    <article class="gallery-card">
-                        <div class="gallery-media">
-                            <img
-                                src="../assets/store/en/02-trackle-calendar.jpg"
-                                data-localized-image
-                                data-src-en="../assets/store/en/02-trackle-calendar.jpg"
-                                data-src-es="../assets/store/es/02-trackle-calendar.jpg"
-                                alt="Trackle renewal calendar"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="gallery-caption">
-                            <h3 data-i18n="gallery.two">Renewal calendar</h3>
-                            <span>02</span>
-                        </div>
-                    </article>
-
-                    <article class="gallery-card">
-                        <div class="gallery-media">
-                            <img
-                                src="../assets/store/en/03-trackle-statistics.jpg"
-                                data-localized-image
-                                data-src-en="../assets/store/en/03-trackle-statistics.jpg"
-                                data-src-es="../assets/store/es/03-trackle-statistics.jpg"
-                                alt="Trackle spending statistics"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="gallery-caption">
-                            <h3 data-i18n="gallery.three">Spending statistics</h3>
-                            <span>03</span>
-                        </div>
-                    </article>
-
-                    <article class="gallery-card">
-                        <div class="gallery-media">
-                            <img
-                                src="../assets/store/en/04-trackle-assistant.jpg"
-                                data-localized-image
-                                data-src-en="../assets/store/en/04-trackle-assistant.jpg"
-                                data-src-es="../assets/store/es/04-trackle-assistant.jpg"
-                                alt="Trackle smart assistant"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="gallery-caption">
-                            <h3 data-i18n="gallery.four">Smart assistant</h3>
-                            <span>04</span>
-                        </div>
-                    </article>
-
-                    <article class="gallery-card gallery-card-wide">
-                        <div class="gallery-media">
-                            <img
-                                src="../assets/store/en/05-trackle-quick-add.jpg"
-                                data-localized-image
-                                data-src-en="../assets/store/en/05-trackle-quick-add.jpg"
-                                data-src-es="../assets/store/es/05-trackle-quick-add.jpg"
-                                alt="Trackle quick subscription suggestions"
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="gallery-caption">
-                            <h3 data-i18n="gallery.five">Quick add</h3>
-                            <span>05</span>
-                        </div>
-                    </article>
+                <div class="hero-float hero-float-next">
+                    <span data-i18n="hero.float.next">Next renewal</span>
+                    <strong data-i18n="hero.float.days">In 2 days</strong>
                 </div>
             </div>
         </section>
 
-        <section class="home-return">
-            <div>
-                <p class="section-label" data-i18n="return.label">More by clr91dev</p>
-                <h2 data-i18n="return.title">Return to the portfolio and discover Bezly.</h2>
-                <a href="../"><span aria-hidden="true">←</span><span data-i18n="return.link">Back to clr91dev</span></a>
+        <section class="signal-strip" aria-label="Trackle highlights">
+            <article>
+                <span>01</span>
+                <strong data-i18n="signals.one.title">See the month ahead</strong>
+                <p data-i18n="signals.one.text">Before the charges arrive.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <strong data-i18n="signals.two.title">Understand every category</strong>
+                <p data-i18n="signals.two.text">Subscriptions and personal expenses.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <strong data-i18n="signals.three.title">Use it on every screen</strong>
+                <p data-i18n="signals.three.text">Designed for iPhone and iPad.</p>
+            </article>
+        </section>
+
+        <section class="problem" id="why">
+            <div class="problem-inner">
+                <div class="problem-copy" data-reveal>
+                    <p class="section-label section-label-light" data-i18n="problem.label">The problem</p>
+                    <h2 data-i18n="problem.title">A renewal should never be a surprise.</h2>
+                    <p data-i18n="problem.text">Services start on different days, renew at different intervals and quietly add up. Trackle shows what is coming while there is still time to decide.</p>
+                </div>
+
+                <div class="renewal-stack" data-reveal>
+                    <div class="renewal-card">
+                        <div class="service-icon spotify">●</div>
+                        <div><strong>Spotify</strong><span data-i18n="problem.card.one">Renews in 2 days</span></div>
+                        <b>€11.99</b>
+                    </div>
+                    <div class="renewal-card">
+                        <div class="service-icon netflix">N</div>
+                        <div><strong>Netflix</strong><span data-i18n="problem.card.two">Renews in 1 week</span></div>
+                        <b>€11.99</b>
+                    </div>
+                    <div class="renewal-card">
+                        <div class="service-icon chatgpt">◎</div>
+                        <div><strong>ChatGPT</strong><span data-i18n="problem.card.three">Renews in 3 weeks</span></div>
+                        <b>€23.00</b>
+                    </div>
+                    <div class="renewal-total">
+                        <span data-i18n="problem.total">Recurring this month</span>
+                        <strong>€46.98</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="section-intro" data-reveal>
+                <p class="section-label" data-i18n="features.label">What Trackle does</p>
+                <h2 data-i18n="features.title">From “what am I paying?” to a clear answer.</h2>
+                <p data-i18n="features.summary">Five views, ordered around the moments when you actually need them.</p>
+            </div>
+
+            <article class="feature feature-blue">
+                <div class="feature-copy" data-reveal>
+                    <span class="feature-number">01 · <span data-i18n="feature.one.moment">Today</span></span>
+                    <h3 data-i18n="feature.one.title">Everything active, in one calm dashboard.</h3>
+                    <p data-i18n="feature.one.text">See your monthly total, upcoming renewals and complete subscription list without digging through receipts or settings.</p>
+                    <ul>
+                        <li data-i18n="feature.one.point.one">Monthly total at a glance</li>
+                        <li data-i18n="feature.one.point.two">Renewal dates and billing frequency</li>
+                    </ul>
+                </div>
+                <div class="feature-media feature-media-ipad" data-reveal>
+                    <img src="../assets/trackle/devices/ipad-home.png" alt="Trackle dashboard overview on iPad" loading="lazy">
+                </div>
+            </article>
+
+            <article class="feature feature-reverse feature-green">
+                <div class="feature-copy" data-reveal>
+                    <span class="feature-number">02 · <span data-i18n="feature.two.moment">Before</span></span>
+                    <h3 data-i18n="feature.two.title">A calendar that looks forward.</h3>
+                    <p data-i18n="feature.two.text">Every renewal appears on the day it is expected. Move through the months and spot expensive weeks before they happen.</p>
+                    <ul>
+                        <li data-i18n="feature.two.point.one">Charged and pending totals</li>
+                        <li data-i18n="feature.two.point.two">Tap a date to see the detail</li>
+                    </ul>
+                </div>
+                <div class="feature-media feature-media-phone" data-reveal>
+                    <img src="../assets/trackle/devices/iphone-calendar.png" alt="Trackle renewal calendar on iPhone" loading="lazy">
+                </div>
+            </article>
+
+            <article class="feature feature-orange">
+                <div class="feature-copy" data-reveal>
+                    <span class="feature-number">03 · <span data-i18n="feature.three.moment">Understand</span></span>
+                    <h3 data-i18n="feature.three.title">Stop adding it up by hand.</h3>
+                    <p data-i18n="feature.three.text">Explore monthly and yearly spending, compare trends and see which categories account for the most.</p>
+                    <ul>
+                        <li data-i18n="feature.three.point.one">Interactive category chart</li>
+                        <li data-i18n="feature.three.point.two">Monthly, yearly and trend views</li>
+                    </ul>
+                </div>
+                <div class="feature-media feature-media-ipad" data-reveal>
+                    <img src="../assets/trackle/devices/ipad-stats.png" alt="Trackle spending statistics on iPad" loading="lazy">
+                </div>
+            </article>
+
+            <article class="feature feature-reverse feature-violet">
+                <div class="feature-copy" data-reveal>
+                    <span class="feature-number">04 · <span data-i18n="feature.four.moment">Decide</span></span>
+                    <h3 data-i18n="feature.four.title">Your data, turned into useful answers.</h3>
+                    <p data-i18n="feature.four.text">The assistant surfaces upcoming charges, your most expensive subscription and possible savings through focused cards.</p>
+                    <ul>
+                        <li data-i18n="feature.four.point.one">A clear smart summary</li>
+                        <li data-i18n="feature.four.point.two">Answers based on your subscriptions</li>
+                    </ul>
+                </div>
+                <div class="feature-media feature-media-duo" data-reveal>
+                    <img class="duo-ipad" src="../assets/trackle/devices/ipad-ai.png" alt="Trackle smart assistant on iPad" loading="lazy">
+                    <img class="duo-phone" src="../assets/trackle/devices/iphone-ai.png" alt="Trackle smart assistant on iPhone" loading="lazy">
+                </div>
+            </article>
+
+            <article class="feature feature-pink">
+                <div class="feature-copy" data-reveal>
+                    <span class="feature-number">05 · <span data-i18n="feature.five.moment">Start</span></span>
+                    <h3 data-i18n="feature.five.title">Add what you use in seconds.</h3>
+                    <p data-i18n="feature.five.text">Choose a familiar service, keep its recognizable icon and complete only the details that matter.</p>
+                    <ul>
+                        <li data-i18n="feature.five.point.one">Popular services ready to add</li>
+                        <li data-i18n="feature.five.point.two">Manual entry for everything else</li>
+                    </ul>
+                </div>
+                <div class="feature-media feature-media-duo feature-media-duo-left" data-reveal>
+                    <img class="duo-ipad" src="../assets/trackle/devices/ipad-quickadd.png" alt="Trackle quick subscription suggestions on iPad" loading="lazy">
+                    <img class="duo-phone" src="../assets/trackle/devices/iphone-quickadd.png" alt="Trackle quick subscription suggestions on iPhone" loading="lazy">
+                </div>
+            </article>
+        </section>
+
+        <section class="devices" id="devices">
+            <div class="devices-copy" data-reveal>
+                <p class="section-label" data-i18n="devices.label">Made for both</p>
+                <h2 data-i18n="devices.title">Quick on iPhone. Expansive on iPad.</h2>
+                <p data-i18n="devices.text">Check the next charge while you are moving, then use the larger iPad layout when you want the whole month or a deeper breakdown.</p>
+                <div class="device-badges">
+                    <span>iPhone</span><span>iPad</span><span data-i18n="devices.badge">Portrait + landscape</span>
+                </div>
+            </div>
+            <div class="devices-stage" data-reveal>
+                <img class="devices-ipad" src="../assets/trackle/devices/ipad-calendar.png" alt="Trackle calendar on iPad" loading="lazy">
+                <img class="devices-phone" src="../assets/trackle/devices/iphone-stats.png" alt="Trackle statistics on iPhone" loading="lazy">
+            </div>
+        </section>
+
+        <section class="privacy" id="privacy">
+            <div class="privacy-mark" aria-hidden="true">⌁</div>
+            <div class="privacy-copy" data-reveal>
+                <p class="section-label section-label-light" data-i18n="privacy.label">Privacy by design</p>
+                <h2 data-i18n="privacy.title">Your payments are yours. Trackle does not need your bank credentials.</h2>
+                <p data-i18n="privacy.text">You decide what to add. Your information is kept within the Apple ecosystem, and iCloud can keep it available across your devices.</p>
+            </div>
+            <div class="privacy-points" data-reveal>
+                <article><span>01</span><strong data-i18n="privacy.one.title">No bank login</strong><p data-i18n="privacy.one.text">Trackle never asks for your online banking password.</p></article>
+                <article><span>02</span><strong data-i18n="privacy.two.title">You stay in control</strong><p data-i18n="privacy.two.text">Add, edit or remove your own records whenever you want.</p></article>
+                <article><span>03</span><strong data-i18n="privacy.three.title">Across your devices</strong><p data-i18n="privacy.three.text">Use your iCloud account to keep iPhone and iPad together.</p></article>
+            </div>
+        </section>
+
+        <section class="questions" id="questions">
+            <div class="questions-heading" data-reveal>
+                <p class="section-label" data-i18n="questions.label">Questions</p>
+                <h2 data-i18n="questions.title">Clear answers before you start.</h2>
+            </div>
+            <div class="faq" data-reveal>
+                <details><summary data-i18n="faq.one.question">Does Trackle connect to my bank?</summary><p data-i18n="faq.one.answer">No. You add the subscriptions and recurring expenses you want to track, so Trackle never needs your bank credentials.</p></details>
+                <details><summary data-i18n="faq.two.question">Can I use it on iPhone and iPad?</summary><p data-i18n="faq.two.answer">Yes. Trackle includes layouts designed for both devices, including portrait and landscape presentations on iPad.</p></details>
+                <details><summary data-i18n="faq.three.question">Is it only for digital subscriptions?</summary><p data-i18n="faq.three.answer">No. You can also organize recurring personal expenses such as rent, insurance, utilities or memberships.</p></details>
+                <details><summary data-i18n="faq.four.question">Does Trackle cancel subscriptions for me?</summary><p data-i18n="faq.four.answer">No. Trackle helps you see what renews and when. A cancellation is still completed directly with the service provider.</p></details>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div data-reveal>
+                <img src="../assets/trackle-app-icon.png" alt="" class="final-icon">
+                <p class="section-label section-label-light">Trackle</p>
+                <h2 data-i18n="final.title">Stop keeping every renewal in your head.</h2>
+                <p data-i18n="final.text">See what you pay, what comes next and where your money goes.</p>
+                <a class="button button-light" href="https://apps.apple.com/app/id6745257638" target="_blank" rel="noopener" data-i18n="final.download">Download Trackle on the App Store</a>
             </div>
         </section>
     </main>
@@ -223,16 +288,13 @@
     <footer>
         <div class="footer-inner">
             <div>
-                <a class="brand" href="../">
-                    <img src="../assets/clr91dev-mark-v2.png" alt="">
-                    <span class="wordmark"><span>clr91</span><span>dev</span></span>
-                </a>
-                <p class="footer-copy" data-i18n="footer.text">Independent iPhone apps built with clarity, privacy and thoughtful design.</p>
+                <a class="trackle-brand" href="#top"><img src="../assets/trackle-app-icon.png" alt=""><span>Trackle</span></a>
+                <p data-i18n="footer.text">A clear, private home for subscriptions and recurring expenses.</p>
             </div>
             <nav class="footer-links" aria-label="Footer">
-                <a href="../" data-i18n="footer.home">Portfolio</a>
-                <a href="../bezly/">Bezly</a>
+                <a href="../" data-i18n="footer.portfolio">clr91dev portfolio</a>
                 <a href="../privacy/" data-i18n="footer.privacy">Privacy</a>
+                <a href="../terms/" data-i18n="footer.terms">Terms</a>
                 <a href="mailto:clr91dev@gmail.com" data-i18n="footer.contact">Contact</a>
             </nav>
         </div>
@@ -242,76 +304,42 @@
     <script>
         window.PAGE_TRANSLATIONS = {
             en: {
-                "nav.back": "Back to portfolio",
-                "hero.available": "Available on the App Store",
-                "hero.eyebrow": "Subscriptions, without the noise",
-                "hero.title": "Everything that renews. Finally clear.",
-                "hero.summary": "Trackle brings subscriptions, recurring payments and upcoming renewals into one calm, private dashboard.",
-                "hero.download": "Download on the App Store",
-                "hero.screens": "See real app screens",
-                "facts.platform.label": "Platform", "facts.platform.value": "iPhone",
-                "facts.focus.label": "Focus", "facts.focus.value": "Subscriptions & recurring expenses",
-                "facts.privacy.label": "Privacy", "facts.privacy.value": "Your data stays on your device",
-                "features.label": "Built for clarity",
-                "features.title": "Know what renews. Understand what you spend.",
-                "features.one.title": "One dashboard",
-                "features.one.text": "See your active subscriptions, monthly total and next renewals without searching through receipts or settings.",
-                "features.two.title": "A visual calendar",
-                "features.two.text": "Understand when charges arrive and spot busy weeks before payments are made.",
-                "features.three.title": "Useful statistics",
-                "features.three.text": "Compare monthly and yearly spending and see which categories account for the most.",
-                "features.four.title": "A smart assistant",
-                "features.four.text": "Ask about renewals, costly services and possible savings through simple, focused cards.",
-                "gallery.label": "Real app screens",
-                "gallery.title": "Trackle, from overview to insight.",
-                "gallery.one": "Subscriptions",
-                "gallery.two": "Renewal calendar",
-                "gallery.three": "Spending statistics",
-                "gallery.four": "Smart assistant",
-                "gallery.five": "Quick add",
-                "return.label": "More by clr91dev",
-                "return.title": "Return to the portfolio and discover Bezly.",
-                "return.link": "Back to clr91dev",
-                "footer.text": "Independent iPhone apps built with clarity, privacy and thoughtful design.",
-                "footer.home": "Portfolio",
-                "footer.privacy": "Privacy",
-                "footer.contact": "Contact"
+                "meta.title": "Trackle — Know what renews before it charges", "meta.description": "Track subscriptions and recurring expenses, anticipate renewals and understand your spending with Trackle for iPhone and iPad.",
+                "access.skip": "Skip to content",
+                "nav.why": "Why Trackle", "nav.features": "What it does", "nav.devices": "iPhone + iPad", "nav.privacy": "Privacy", "nav.questions": "Questions", "nav.download": "Download",
+                "hero.eyebrow": "Your recurring payments, without surprises", "hero.title": "Know what renews. Before it charges.", "hero.summary": "Trackle brings subscriptions, personal recurring expenses and upcoming renewals into one clear place—without connecting to your bank.", "hero.download": "Download on the App Store", "hero.discover": "See how it works",
+                "hero.note.one": "For iPhone and iPad", "hero.note.two": "No bank connection", "hero.note.three": "Available in multiple languages", "hero.float.total": "Monthly total", "hero.float.next": "Next renewal", "hero.float.days": "In 2 days",
+                "signals.one.title": "See the month ahead", "signals.one.text": "Before the charges arrive.", "signals.two.title": "Understand every category", "signals.two.text": "Subscriptions and personal expenses.", "signals.three.title": "Use it on every screen", "signals.three.text": "Designed for iPhone and iPad.",
+                "problem.label": "The problem", "problem.title": "A renewal should never be a surprise.", "problem.text": "Services start on different days, renew at different intervals and quietly add up. Trackle shows what is coming while there is still time to decide.", "problem.card.one": "Renews in 2 days", "problem.card.two": "Renews in 1 week", "problem.card.three": "Renews in 3 weeks", "problem.total": "Recurring this month",
+                "features.label": "What Trackle does", "features.title": "From “what am I paying?” to a clear answer.", "features.summary": "Five views, ordered around the moments when you actually need them.",
+                "feature.one.moment": "Today", "feature.one.title": "Everything active, in one calm dashboard.", "feature.one.text": "See your monthly total, upcoming renewals and complete subscription list without digging through receipts or settings.", "feature.one.point.one": "Monthly total at a glance", "feature.one.point.two": "Renewal dates and billing frequency",
+                "feature.two.moment": "Before", "feature.two.title": "A calendar that looks forward.", "feature.two.text": "Every renewal appears on the day it is expected. Move through the months and spot expensive weeks before they happen.", "feature.two.point.one": "Charged and pending totals", "feature.two.point.two": "Tap a date to see the detail",
+                "feature.three.moment": "Understand", "feature.three.title": "Stop adding it up by hand.", "feature.three.text": "Explore monthly and yearly spending, compare trends and see which categories account for the most.", "feature.three.point.one": "Interactive category chart", "feature.three.point.two": "Monthly, yearly and trend views",
+                "feature.four.moment": "Decide", "feature.four.title": "Your data, turned into useful answers.", "feature.four.text": "The assistant surfaces upcoming charges, your most expensive subscription and possible savings through focused cards.", "feature.four.point.one": "A clear smart summary", "feature.four.point.two": "Answers based on your subscriptions",
+                "feature.five.moment": "Start", "feature.five.title": "Add what you use in seconds.", "feature.five.text": "Choose a familiar service, keep its recognizable icon and complete only the details that matter.", "feature.five.point.one": "Popular services ready to add", "feature.five.point.two": "Manual entry for everything else",
+                "devices.label": "Made for both", "devices.title": "Quick on iPhone. Expansive on iPad.", "devices.text": "Check the next charge while you are moving, then use the larger iPad layout when you want the whole month or a deeper breakdown.", "devices.badge": "Portrait + landscape",
+                "privacy.label": "Privacy by design", "privacy.title": "Your payments are yours. Trackle does not need your bank credentials.", "privacy.text": "You decide what to add. Your information is kept within the Apple ecosystem, and iCloud can keep it available across your devices.", "privacy.one.title": "No bank login", "privacy.one.text": "Trackle never asks for your online banking password.", "privacy.two.title": "You stay in control", "privacy.two.text": "Add, edit or remove your own records whenever you want.", "privacy.three.title": "Across your devices", "privacy.three.text": "Use your iCloud account to keep iPhone and iPad together.",
+                "questions.label": "Questions", "questions.title": "Clear answers before you start.", "faq.one.question": "Does Trackle connect to my bank?", "faq.one.answer": "No. You add the subscriptions and recurring expenses you want to track, so Trackle never needs your bank credentials.", "faq.two.question": "Can I use it on iPhone and iPad?", "faq.two.answer": "Yes. Trackle includes layouts designed for both devices, including portrait and landscape presentations on iPad.", "faq.three.question": "Is it only for digital subscriptions?", "faq.three.answer": "No. You can also organize recurring personal expenses such as rent, insurance, utilities or memberships.", "faq.four.question": "Does Trackle cancel subscriptions for me?", "faq.four.answer": "No. Trackle helps you see what renews and when. A cancellation is still completed directly with the service provider.",
+                "final.title": "Stop keeping every renewal in your head.", "final.text": "See what you pay, what comes next and where your money goes.", "final.download": "Download Trackle on the App Store", "footer.text": "A clear, private home for subscriptions and recurring expenses.", "footer.portfolio": "clr91dev portfolio", "footer.privacy": "Privacy", "footer.terms": "Terms", "footer.contact": "Contact"
             },
             es: {
-                "nav.back": "Volver al portfolio",
-                "hero.available": "Disponible en App Store",
-                "hero.eyebrow": "Suscripciones, sin ruido",
-                "hero.title": "Todo lo que renueva. Por fin claro.",
-                "hero.summary": "Trackle reúne suscripciones, pagos recurrentes y próximas renovaciones en un panel tranquilo y privado.",
-                "hero.download": "Descargar en App Store",
-                "hero.screens": "Ver capturas reales",
-                "facts.platform.label": "Plataforma", "facts.platform.value": "iPhone",
-                "facts.focus.label": "Enfoque", "facts.focus.value": "Suscripciones y gastos recurrentes",
-                "facts.privacy.label": "Privacidad", "facts.privacy.value": "Tus datos permanecen en tu dispositivo",
-                "features.label": "Creada para aportar claridad",
-                "features.title": "Sabe qué renueva. Entiende cuánto gastas.",
-                "features.one.title": "Un solo panel",
-                "features.one.text": "Consulta tus suscripciones activas, el total mensual y las próximas renovaciones sin buscar entre recibos o ajustes.",
-                "features.two.title": "Un calendario visual",
-                "features.two.text": "Entiende cuándo llegan los cobros y detecta las semanas con más pagos antes de que se produzcan.",
-                "features.three.title": "Estadísticas útiles",
-                "features.three.text": "Compara el gasto mensual y anual y descubre qué categorías concentran el mayor importe.",
-                "features.four.title": "Un asistente inteligente",
-                "features.four.text": "Pregunta por renovaciones, servicios más caros y posibles ahorros mediante tarjetas sencillas y directas.",
-                "gallery.label": "Capturas reales de la app",
-                "gallery.title": "Trackle, del resumen al detalle.",
-                "gallery.one": "Suscripciones",
-                "gallery.two": "Calendario de renovaciones",
-                "gallery.three": "Estadísticas de gasto",
-                "gallery.four": "Asistente inteligente",
-                "gallery.five": "Añadir rápidamente",
-                "return.label": "Más de clr91dev",
-                "return.title": "Vuelve al portfolio y descubre Bezly.",
-                "return.link": "Volver a clr91dev",
-                "footer.text": "Apps independientes para iPhone creadas con claridad, privacidad y un diseño cuidado.",
-                "footer.home": "Portfolio",
-                "footer.privacy": "Privacidad",
-                "footer.contact": "Contacto"
+                "meta.title": "Trackle — Sabe qué renueva antes de que te cobren", "meta.description": "Controla suscripciones y gastos recurrentes, anticípate a las renovaciones y entiende tus gastos con Trackle para iPhone y iPad.",
+                "access.skip": "Saltar al contenido",
+                "nav.why": "Por qué Trackle", "nav.features": "Qué hace", "nav.devices": "iPhone + iPad", "nav.privacy": "Privacidad", "nav.questions": "Preguntas", "nav.download": "Descargar",
+                "hero.eyebrow": "Tus pagos recurrentes, sin sorpresas", "hero.title": "Sabe qué renueva. Antes de que te cobren.", "hero.summary": "Trackle reúne suscripciones, gastos personales recurrentes y próximas renovaciones en un lugar claro, sin conectarse a tu banco.", "hero.download": "Descargar en App Store", "hero.discover": "Ver cómo funciona",
+                "hero.note.one": "Para iPhone y iPad", "hero.note.two": "Sin conexión bancaria", "hero.note.three": "Disponible en varios idiomas", "hero.float.total": "Total mensual", "hero.float.next": "Próxima renovación", "hero.float.days": "En 2 días",
+                "signals.one.title": "Anticípate al mes", "signals.one.text": "Antes de que lleguen los cobros.", "signals.two.title": "Entiende cada categoría", "signals.two.text": "Suscripciones y gastos personales.", "signals.three.title": "Úsala en cada pantalla", "signals.three.text": "Diseñada para iPhone y iPad.",
+                "problem.label": "El problema", "problem.title": "Una renovación nunca debería pillarte por sorpresa.", "problem.text": "Los servicios empiezan en días distintos, renuevan con frecuencias diferentes y se van sumando sin hacer ruido. Trackle te enseña lo que viene mientras aún puedes decidir.", "problem.card.one": "Renueva en 2 días", "problem.card.two": "Renueva en 1 semana", "problem.card.three": "Renueva en 3 semanas", "problem.total": "Recurrente este mes",
+                "features.label": "Qué hace Trackle", "features.title": "De preguntarte cuánto pagas a una respuesta clara.", "features.summary": "Cinco vistas ordenadas según el momento en que realmente las necesitas.",
+                "feature.one.moment": "Hoy", "feature.one.title": "Todo lo activo, en un panel tranquilo.", "feature.one.text": "Consulta tu total mensual, las próximas renovaciones y la lista completa sin buscar entre recibos o ajustes.", "feature.one.point.one": "Total mensual de un vistazo", "feature.one.point.two": "Fechas de renovación y frecuencia",
+                "feature.two.moment": "Antes", "feature.two.title": "Un calendario que mira hacia delante.", "feature.two.text": "Cada renovación aparece el día previsto. Recorre los meses y detecta las semanas más caras antes de que lleguen.", "feature.two.point.one": "Totales cobrados y pendientes", "feature.two.point.two": "Toca una fecha para ver el detalle",
+                "feature.three.moment": "Entender", "feature.three.title": "Deja de sumar a mano.", "feature.three.text": "Explora el gasto mensual y anual, compara tendencias y descubre qué categorías concentran el mayor importe.", "feature.three.point.one": "Gráfico interactivo por categorías", "feature.three.point.two": "Vistas mensual, anual y tendencia",
+                "feature.four.moment": "Decidir", "feature.four.title": "Tus datos, convertidos en respuestas útiles.", "feature.four.text": "El asistente destaca los próximos cargos, tu suscripción más cara y posibles ahorros mediante tarjetas sencillas.", "feature.four.point.one": "Un resumen inteligente y claro", "feature.four.point.two": "Respuestas basadas en tus suscripciones",
+                "feature.five.moment": "Empezar", "feature.five.title": "Añade lo que usas en segundos.", "feature.five.text": "Elige un servicio conocido, conserva su icono reconocible y completa solo los datos que importan.", "feature.five.point.one": "Servicios populares listos para añadir", "feature.five.point.two": "Entrada manual para todo lo demás",
+                "devices.label": "Creada para ambos", "devices.title": "Rápida en iPhone. Completa en iPad.", "devices.text": "Consulta el próximo cobro mientras te mueves y usa el diseño amplio del iPad cuando quieras ver el mes completo o analizar más detalles.", "devices.badge": "Vertical + horizontal",
+                "privacy.label": "Privacidad desde el diseño", "privacy.title": "Tus pagos son tuyos. Trackle no necesita tus claves del banco.", "privacy.text": "Tú decides qué añadir. Tu información permanece dentro del ecosistema de Apple e iCloud puede mantenerla disponible entre tus dispositivos.", "privacy.one.title": "Sin acceso bancario", "privacy.one.text": "Trackle nunca te pide la contraseña de tu banca online.", "privacy.two.title": "Tú mantienes el control", "privacy.two.text": "Añade, edita o elimina tus propios datos cuando quieras.", "privacy.three.title": "En todos tus dispositivos", "privacy.three.text": "Usa tu cuenta de iCloud para mantener iPhone y iPad al día.",
+                "questions.label": "Preguntas", "questions.title": "Respuestas claras antes de empezar.", "faq.one.question": "¿Trackle se conecta a mi banco?", "faq.one.answer": "No. Tú añades las suscripciones y gastos recurrentes que quieres controlar, así que Trackle no necesita tus claves bancarias.", "faq.two.question": "¿Puedo usarla en iPhone y iPad?", "faq.two.answer": "Sí. Trackle incluye diseños creados para ambos dispositivos, también en vertical y horizontal en iPad.", "faq.three.question": "¿Sirve solo para suscripciones digitales?", "faq.three.answer": "No. También puedes organizar gastos personales recurrentes como alquiler, seguros, suministros o cuotas.", "faq.four.question": "¿Trackle cancela las suscripciones por mí?", "faq.four.answer": "No. Trackle te ayuda a ver qué renueva y cuándo. La cancelación se completa directamente con el proveedor del servicio.",
+                "final.title": "Deja de llevar cada renovación en la cabeza.", "final.text": "Ve cuánto pagas, qué viene después y dónde se va tu dinero.", "final.download": "Descargar Trackle en App Store", "footer.text": "Un lugar claro y privado para tus suscripciones y gastos recurrentes.", "footer.portfolio": "Portfolio de clr91dev", "footer.privacy": "Privacidad", "footer.terms": "Términos", "footer.contact": "Contacto"
             }
         };
     </script>
