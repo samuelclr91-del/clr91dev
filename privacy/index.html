@@ -124,53 +124,59 @@
         </div>
 
         <h1 data-i18n="title">Privacy Policy</h1>
-        <p class="date"><span data-i18n="updated">Last updated:</span> <span data-i18n="date">April 13, 2026</span></p>
+        <p class="date"><span data-i18n="updated">Last updated:</span> <span data-i18n="date">October 2, 2026</span></p>
 
         <div class="highlight">
-            <p><strong data-i18n="summary.label">In short:</strong> <span data-i18n="summary.body">Trackle does not collect, store, or share your personal data. Everything stays on your device.</span></p>
+            <p><strong data-i18n="summary.label">In short:</strong> <span data-i18n="summary.body">Trackle works without an account and keeps your data on your device. If you sign in or turn on sync, a copy of your data is stored in the cloud so it can follow you across devices. We do not sell your data, show ads or track you.</span></p>
         </div>
 
-        <h2 data-i18n="s1.title">1. Data we collect</h2>
-        <p data-i18n="s1.p1">Trackle does not collect personal data. All information you enter into the app (subscriptions, prices, categories, user profiles) is stored exclusively on your device using local storage.</p>
-        <p data-i18n="s1.p2">We do not use our own servers, nor third-party servers, to process or store your information.</p>
-
-        <h2 data-i18n="s2.title">2. Apple Intelligence</h2>
-        <p data-i18n="s2.p1">Trackle uses Apple Intelligence to power its financial-analysis assistant. This processing runs entirely on your device using Apple's on-device foundation model. No data is sent to external servers for this purpose.</p>
-        <p data-i18n="s2.p2">On devices that don't support Apple Intelligence, the assistant falls back to a local rules-based engine — also without any server connection.</p>
-
-        <h2 data-i18n="s3.title">3. Purchase data</h2>
-        <p data-i18n="s3.p1">Subscriptions and in-app purchases are handled exclusively by Apple and the App Store. Trackle has no access to your payment information, credit card, or billing data. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> for more details.</p>
-
-        <h2 data-i18n="s4.title">4. Anonymous analytics (optional)</h2>
-        <p data-i18n="s4.p1">Trackle offers the option to share fully anonymous usage data and crash reports. This feature:</p>
+        <h2 data-i18n="s1.title">1. Your data stays on your device by default</h2>
+        <p data-i18n="s1.p1">Everything you enter in Trackle — subscriptions, transactions, accounts, categories, budgets, profiles and your profile photo — is stored on your device. You can use the free plan without creating an account.</p>
+        <p data-i18n="s1.p2">If you turn on iCloud sync, a copy is stored in your own private iCloud storage, managed by Apple. We cannot access it.</p>
+        <h2 data-i18n="s2.title">2. Account and cloud copy (optional)</h2>
+        <p data-i18n="s2.p1">If you sign in with Apple or Google, Trackle creates an account using Google Firebase (Authentication and Cloud Firestore). We receive an account identifier and the name and email address that Apple or Google share with the app (Apple lets you hide your email).</p>
+        <p data-i18n="s2.p2">While you are signed in, Trackle uploads a copy of your data — subscriptions, profiles, monthly history, settings, accounts, categories, budgets and transactions — linked to your account identifier, so it stays in sync across your devices and can be restored. It travels over an encrypted connection (HTTPS) and is protected at rest by Google, but it is <strong>not end-to-end encrypted</strong>. We only access it to operate the service and to give you support.</p>
+        <p data-i18n="s2.p3">Using an account is optional: Trackle works without one.</p>
+        <h2 data-i18n="s3.title">3. Purchases</h2>
+        <p data-i18n="s3.p1">Subscriptions and in-app purchases are processed by Apple and the App Store. Trackle never sees your card or billing details. To unlock Pro features and restore purchases, Trackle uses RevenueCat, which receives an app user identifier, your purchase history and, if you have signed in, your email address, your name, the sign-in method and basic app information (such as the app version). See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> and <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's privacy policy</a>.</p>
+        <h2 data-i18n="s4.title">4. Apple Intelligence</h2>
+        <p data-i18n="s4.p1">Trackle uses Apple Intelligence to power its financial-analysis assistant. This processing runs entirely on your device using Apple's on-device foundation model. No data is sent to external servers for this purpose.</p>
+        <p data-i18n="s4.p2">On devices that don't support Apple Intelligence, the assistant falls back to a local rules-based engine — also without any server connection.</p>
+        <h2 data-i18n="s5.title">5. Other services Trackle connects to</h2>
+        <p data-i18n="s5.p1">To show icons and check for updates, Trackle contacts the services below. Each receives only what its request needs and, as with any internet connection, your IP address:</p>
         <ul>
-            <li><span data-i18n="s4.li1.a">Is</span> <strong data-i18n="s4.li1.b">disabled by default</strong></li>
-            <li data-i18n="s4.li2">Is fully optional and can be turned on or off any time from Settings</li>
-            <li data-i18n="s4.li3">Does not include personal data, subscription names, or amounts</li>
-            <li data-i18n="s4.li4">Is used solely to detect bugs and improve the app</li>
+            <li data-i18n="s5.li1"><strong>Apple (iTunes Search):</strong> the name of the subscription you type, to find its app icon.</li>
+            <li data-i18n="s5.li2"><strong>DuckDuckGo and Google (favicons):</strong> the website domain of a service you add, to fetch its icon.</li>
+            <li data-i18n="s5.li3"><strong>Apple (App Store):</strong> Trackle's app identifier, to check whether a new version exists, and a request to apple.com to check your connection.</li>
+            <li data-i18n="s5.li4"><strong>Apple and Google sign-in:</strong> only if you choose to sign in.</li>
         </ul>
-
-        <h2 data-i18n="s5.title">5. Third-party services</h2>
-        <p data-i18n="s5.p1">Trackle uses the following services to display icons for your subscriptions:</p>
+        <p data-i18n="s5.p3">These services do not receive your amounts, categories, transactions or notes.</p>
+        <h2 data-i18n="s6.title">6. What is handled only on your device</h2>
         <ul>
-            <li><strong>iTunes Search API</strong> <span data-i18n="s5.li1">(Apple): to fetch app icons</span></li>
-            <li><strong>DuckDuckGo Icons</strong><span data-i18n="s5.li2">: to fetch website favicons</span></li>
+            <li data-i18n="s6.li1"><strong>Face ID / Touch ID:</strong> handled by iOS. Trackle never receives your biometric data.</li>
+            <li data-i18n="s6.li2"><strong>Notifications:</strong> reminders are scheduled locally on your device.</li>
+            <li data-i18n="s6.li3"><strong>Importing a screenshot:</strong> Trackle reads the screenshot you choose (or your latest one, if you allow access to Photos) and analyses it on the device with Apple's text recognition. The image is not uploaded.</li>
+            <li data-i18n="s6.li4"><strong>Spotlight, Siri shortcuts and widgets:</strong> they use data kept on your device.</li>
         </ul>
-        <p data-i18n="s5.p2">These requests are made to look up icons and do not transmit personal data.</p>
-
-        <h2 data-i18n="s6.title">6. Children's data</h2>
-        <p data-i18n="s6.p1">Trackle is not directed at children under 13 and does not knowingly collect data from minors. If you are a parent or guardian and believe your child has provided information, please contact us so we can take the necessary action.</p>
-
-        <h2 data-i18n="s7.title">7. Security</h2>
-        <p data-i18n="s7.p1">Because no data is transmitted to or stored on external servers, the risk of a data leak is minimal. Your information is protected by the security features of your own Apple device (Face ID, passcode, disk encryption).</p>
-
-        <h2 data-i18n="s8.title">8. Changes to this policy</h2>
-        <p data-i18n="s8.p1">We reserve the right to update this privacy policy. Any changes will be published on this page with the corresponding update date. We recommend reviewing it periodically.</p>
-
-        <h2 data-i18n="s9.title">9. Contact</h2>
+        <h2 data-i18n="s7.title">7. What we don't do</h2>
+        <p data-i18n="s7.p1">Trackle has no ads, does not track you across other apps or websites, contains no analytics or crash-reporting libraries, and we never sell your data or share it for marketing. If you choose to share analytics with app developers in iOS Settings, Apple may give us anonymous, aggregated reports that cannot identify you.</p>
+        <h2 data-i18n="s8.title">8. Where data is processed</h2>
+        <p data-i18n="s8.p1">Google (Firebase) and RevenueCat may process data on servers outside the European Economic Area, including the United States. These providers state that they use safeguards recognised by EU law, such as standard contractual clauses.</p>
+        <h2 data-i18n="s9.title">9. How long we keep it and how to delete it</h2>
+        <p data-i18n="s9.p1">Data stored only on your device disappears when you delete it in the app or uninstall Trackle.</p>
+        <p data-i18n="s9.p2">In the app, go to Settings › Profile › <strong>Delete my account</strong>: it immediately deletes your account and your backup in Firebase, and removes your data from your device and from iCloud. "Delete all data" does the same without removing the account. The purchase record kept by RevenueCat (identifier, email, name) is deleted on request at the email address below, within 30 days.</p>
+        <h2 data-i18n="s10.title">10. Your rights</h2>
+        <p data-i18n="s10.p1">You can ask us for access to your data, to correct it, delete it, restrict or object to its processing, and to receive it in a portable format. Contact us at the address below. You can also lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>). The controller is Samuel Rodríguez Díez (Clr91dev).</p>
+        <h2 data-i18n="s11.title">11. Security</h2>
+        <p data-i18n="s11.p1">Cloud copies travel over HTTPS and are protected by Google's infrastructure. On your device, your data is protected by the security features of iOS (passcode, Face ID, disk encryption), and you can lock Trackle with Face ID or Touch ID.</p>
+        <h2 data-i18n="s12.title">12. Children's data</h2>
+        <p data-i18n="s12.p1">Trackle is not directed at children under 14 and does not knowingly collect data from minors. If you are a parent or guardian and believe your child has provided information, please contact us so we can take the necessary action.</p>
+        <h2 data-i18n="s13.title">13. Changes to this policy</h2>
+        <p data-i18n="s13.p1">We may update this privacy policy. Any changes will be published on this page with the corresponding update date. We recommend reviewing it from time to time.</p>
+        <h2 data-i18n="s14.title">14. Contact</h2>
         <div class="card">
-            <p data-i18n="s9.p1">If you have questions about this privacy policy, you can reach us at:</p>
-            <p><strong data-i18n="s9.email">Email:</strong> <a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com</a></p>
+            <p data-i18n="s14.p1">If you have questions about this privacy policy or want to exercise your rights, you can reach us at:</p>
+            <p><strong data-i18n="s14.email">Email:</strong> <a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com</a></p>
         </div>
 
         <div class="footer">
@@ -189,47 +195,65 @@
             es: {
                 'title': 'Política de Privacidad',
                 'updated': 'Última actualización:',
-                'date': '13 de abril de 2026',
+                'date': '2 de octubre de 2026',
                 'summary.label': 'En resumen:',
-                'summary.body': 'Trackle no recopila, almacena ni comparte tus datos personales. Todo permanece en tu dispositivo.',
+                'summary.body': 'Trackle funciona sin cuenta y guarda tus datos en tu dispositivo. Si inicias sesión o activas la sincronización, se guarda una copia en la nube para que te acompañe entre dispositivos. No vendemos tus datos, no mostramos publicidad ni te rastreamos.',
 
-                's1.title': '1. Datos que recopilamos',
-                's1.p1': 'Trackle no recopila datos personales. Toda la información que introduces en la app (suscripciones, precios, categorías, perfiles de usuario) se almacena exclusivamente en tu dispositivo mediante almacenamiento local.',
-                's1.p2': 'No utilizamos servidores propios ni de terceros para procesar o almacenar tu información.',
+                's1.title': '1. Tus datos se quedan en tu dispositivo por defecto',
+                's1.p1': 'Todo lo que introduces en Trackle (suscripciones, movimientos, cuentas, categorías, presupuestos, perfiles y tu foto de perfil) se guarda en tu dispositivo. Puedes usar el plan gratuito sin crear una cuenta.',
+                's1.p2': 'Si activas la sincronización con iCloud, se guarda una copia en tu propio espacio privado de iCloud, gestionado por Apple. Nosotros no tenemos acceso a ella.',
 
-                's2.title': '2. Apple Intelligence',
-                's2.p1': 'Trackle utiliza Apple Intelligence para potenciar su asistente de análisis financiero. Este procesamiento se realiza íntegramente en tu dispositivo mediante el modelo fundacional on-device de Apple. Ningún dato se envía a servidores externos para este fin.',
-                's2.p2': 'En dispositivos no compatibles con Apple Intelligence, el asistente funciona con un motor local basado en reglas, igualmente sin conexión a servidores.',
+                's2.title': '2. Cuenta y copia en la nube (opcional)',
+                's2.p1': 'Si inicias sesión con Apple o con Google, Trackle crea una cuenta mediante Google Firebase (Authentication y Cloud Firestore). Recibimos un identificador de cuenta y el nombre y el correo que Apple o Google comparten con la app (Apple te permite ocultar tu correo).',
+                's2.p2': 'Mientras tienes la sesión iniciada, Trackle sube una copia de tus datos (suscripciones, perfiles, historial mensual, ajustes, cuentas, categorías, presupuestos y movimientos) vinculada a tu identificador de cuenta, para mantenerlos sincronizados entre tus dispositivos y poder restaurarlos. Viaja por una conexión cifrada (HTTPS) y Google la protege en reposo, pero <strong>no está cifrada de extremo a extremo</strong>. Solo accedemos a ella para hacer funcionar el servicio y para darte soporte.',
+                's2.p3': 'Usar una cuenta es opcional: Trackle funciona sin ella.',
 
-                's3.title': '3. Datos de compra',
-                's3.p1': 'Las suscripciones y compras dentro de la app se gestionan exclusivamente a través de Apple y el App Store. Trackle no tiene acceso a tu información de pago, tarjeta de crédito ni datos de facturación. Puedes consultar la <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidad de Apple</a> para más información.',
+                's3.title': '3. Compras',
+                's3.p1': 'Las suscripciones y las compras dentro de la app las gestionan Apple y el App Store. Trackle nunca ve tu tarjeta ni tus datos de facturación. Para desbloquear las funciones Pro y restaurar compras, Trackle usa RevenueCat, que recibe un identificador de usuario de la app, tu historial de compras y, si has iniciado sesión, tu correo, tu nombre, el método de inicio de sesión e información básica de la app (como su versión). Consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidad de Apple</a> y la <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">de RevenueCat</a>.',
 
-                's4.title': '4. Análisis anónimos (opcional)',
-                's4.p1': 'Trackle ofrece la opción de compartir datos de uso completamente anónimos y registros de errores. Esta función:',
-                's4.li1.a': 'Está',
-                's4.li1.b': 'desactivada por defecto',
-                's4.li2': 'Es totalmente opcional y puedes activarla o desactivarla en cualquier momento desde Ajustes',
-                's4.li3': 'No incluye datos personales, nombres de suscripciones ni importes',
-                's4.li4': 'Se utiliza exclusivamente para detectar fallos y mejorar la app',
+                's4.title': '4. Apple Intelligence',
+                's4.p1': 'Trackle utiliza Apple Intelligence para potenciar su asistente de análisis financiero. Este procesamiento se realiza íntegramente en tu dispositivo mediante el modelo fundacional on-device de Apple. Ningún dato se envía a servidores externos para este fin.',
+                's4.p2': 'En dispositivos no compatibles con Apple Intelligence, el asistente funciona con un motor local basado en reglas, igualmente sin conexión a servidores.',
 
-                's5.title': '5. Servicios de terceros',
-                's5.p1': 'Trackle utiliza los siguientes servicios para mostrar iconos de tus suscripciones:',
-                's5.li1': '(Apple): para obtener iconos de apps',
-                's5.li2': ': para obtener favicons de sitios web',
-                's5.p2': 'Estas peticiones se realizan para buscar iconos y no transmiten datos personales.',
+                's5.title': '5. Otros servicios a los que se conecta Trackle',
+                's5.p1': 'Para mostrar iconos y buscar actualizaciones, Trackle contacta con los servicios siguientes. Cada uno recibe solo lo que necesita su petición y, como en cualquier conexión a internet, tu dirección IP:',
+                's5.li1': '<strong>Apple (iTunes Search):</strong> el nombre de la suscripción que escribes, para encontrar el icono de su app.',
+                's5.li2': '<strong>DuckDuckGo y Google (favicons):</strong> el dominio web de un servicio que añades, para obtener su icono.',
+                's5.li3': '<strong>Apple (App Store):</strong> el identificador de la app de Trackle, para saber si hay una versión nueva, y una petición a apple.com para comprobar tu conexión.',
+                's5.li4': '<strong>Inicio de sesión de Apple y de Google:</strong> solo si decides iniciar sesión.',
+                's5.p3': 'Estos servicios no reciben tus importes, categorías, movimientos ni notas.',
 
-                's6.title': '6. Datos de menores',
-                's6.p1': 'Trackle no está dirigida a menores de 13 años y no recopila conscientemente datos de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado información, contacta con nosotros para que podamos tomar las medidas necesarias.',
+                's6.title': '6. Lo que se gestiona solo en tu dispositivo',
+                's6.li1': '<strong>Face ID / Touch ID:</strong> lo gestiona iOS. Trackle nunca recibe tus datos biométricos.',
+                's6.li2': '<strong>Notificaciones:</strong> los avisos se programan localmente en tu dispositivo.',
+                's6.li3': '<strong>Importar una captura:</strong> Trackle lee la captura que eliges (o la más reciente, si permites el acceso a Fotos) y la analiza en el dispositivo con el reconocimiento de texto de Apple. La imagen no se sube a ningún sitio.',
+                's6.li4': '<strong>Spotlight, atajos de Siri y widgets:</strong> usan datos guardados en tu dispositivo.',
 
-                's7.title': '7. Seguridad',
-                's7.p1': 'Al no transmitir ni almacenar datos en servidores externos, el riesgo de filtración de datos es mínimo. Tu información queda protegida por las medidas de seguridad de tu propio dispositivo Apple (Face ID, código de acceso, cifrado de disco).',
+                's7.title': '7. Lo que no hacemos',
+                's7.p1': 'Trackle no tiene publicidad, no te rastrea en otras apps ni sitios web, no incluye librerías de analítica ni de informes de errores, y nunca vendemos tus datos ni los compartimos con fines de marketing. Si decides compartir analíticas con los desarrolladores en los Ajustes de iOS, Apple puede darnos informes anónimos y agregados que no permiten identificarte.',
 
-                's8.title': '8. Cambios en esta política',
-                's8.p1': 'Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será publicado en esta página con la fecha de actualización correspondiente. Te recomendamos revisarla periódicamente.',
+                's8.title': '8. Dónde se procesan los datos',
+                's8.p1': 'Google (Firebase) y RevenueCat pueden tratar datos en servidores fuera del Espacio Económico Europeo, incluido Estados Unidos. Estos proveedores indican que aplican garantías reconocidas por la normativa europea, como las cláusulas contractuales tipo.',
 
-                's9.title': '9. Contacto',
-                's9.p1': 'Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en:',
-                's9.email': 'Email:',
+                's9.title': '9. Cuánto tiempo la conservamos y cómo borrarla',
+                's9.p1': 'Los datos guardados solo en tu dispositivo desaparecen cuando los borras en la app o desinstalas Trackle.',
+                's9.p2': 'Desde los Ajustes de la app, en Perfil › <strong>Eliminar mi cuenta</strong>, se elimina al instante tu cuenta y tu copia en Firebase, y se borran tus datos del dispositivo y de iCloud. «Eliminar todos los datos» hace lo mismo sin eliminar la cuenta. El registro de compras que conserva RevenueCat (identificador, correo, nombre) se elimina a petición, escribiéndonos al correo de más abajo, en un plazo de 30 días.',
+
+                's10.title': '10. Tus derechos',
+                's10.p1': 'Puedes pedirnos acceso a tus datos, que los rectifiquemos o los eliminemos, que limitemos su tratamiento o te opongas a él, y recibirlos en un formato portable. Escríbenos a la dirección de más abajo. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>). El responsable es Samuel Rodríguez Díez (Clr91dev).',
+
+                's11.title': '11. Seguridad',
+                's11.p1': 'Las copias en la nube viajan por HTTPS y las protege la infraestructura de Google. En tu dispositivo, tus datos quedan protegidos por las medidas de seguridad de iOS (código de acceso, Face ID, cifrado de disco), y puedes bloquear Trackle con Face ID o Touch ID.',
+
+                's12.title': '12. Datos de menores',
+                's12.p1': 'Trackle no está dirigida a menores de 14 años y no recopila conscientemente datos de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado información, contacta con nosotros para que podamos tomar las medidas necesarias.',
+
+                's13.title': '13. Cambios en esta política',
+                's13.p1': 'Podemos actualizar esta política de privacidad. Cualquier cambio se publicará en esta página con la fecha de actualización correspondiente. Te recomendamos revisarla de vez en cuando.',
+
+                's14.title': '14. Contacto',
+                's14.p1': 'Si tienes preguntas sobre esta política de privacidad o quieres ejercer tus derechos, puedes contactarnos en:',
+                's14.email': 'Email:',
 
                 'footer.terms': 'Términos de uso',
                 'footer.privacy': 'Privacidad',
