@@ -57,6 +57,7 @@
   const next = document.querySelector('[data-gallery-next]');
   const count = document.querySelector('.gallery-count');
   const progress = document.querySelector('.gallery-progress span');
+  progress.style.width = `${100 / cards.length}%`;
   let current = 0;
   function updateGallery() {
     const center = rail.getBoundingClientRect().left + rail.clientWidth / 2;

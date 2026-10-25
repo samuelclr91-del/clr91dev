@@ -1227,6 +1227,77 @@ summary {
 
 }
 
+.scrap-zuvly {
+    left: 565px;
+    top: 15px;
+    transform: rotate(8deg);
+}
+.scrap-zuvly:hover { transform: rotate(3deg) translateY(-5px); }
+.native-scene { background: #11251f; }
+.native-scene .scene-render {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.native-scene .project-backword,
+.product-cover .native-scene .project-backword {
+    z-index: 1;
+    top: 7%;
+    left: 5%;
+    font-size: clamp(44px, 7vw, 100px);
+    color: #f5f4f0;
+    letter-spacing: -.06em;
+}
+.native-scene .scene-note {
+    color: #f2d38b;
+    left: 5%;
+    bottom: 8%;
+    font-size: clamp(22px, 3vw, 42px);
+    max-width: 35%;
+    text-shadow: none;
+}
+.native-scene .scene-tag { color: #eeeae0; z-index: 1; }
+.native-scene .open-project { color: #f5f4f0; border-color: #f5f4f066; z-index: 1; }
+.native-scene:hover .open-project { background: #f5f4f01a; }
+.bezly-scene.native-scene .project-backword,
+.bezly-scene.native-scene .scene-note,
+.bezly-scene.native-scene .scene-tag,
+.bezly-scene.native-scene .open-project { color: #282318; }
+.bezly-scene.native-scene .open-project { border-color: #28231855; }
+.feature-media.native-media,
+.product-bezly .feature-media.native-media {
+    padding: 0;
+    min-height: 0;
+    aspect-ratio: 1;
+}
+.feature-media .native-feature-image,
+.product-bezly .feature-media .native-feature-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    filter: none;
+}
+.zuvly-overview {
+    margin: 0 var(--gutter) 70px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 45px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+}
+.zuvly-overview h2 { font-size: 30px; font-weight: 450; line-height: 1.15; letter-spacing: -.04em; margin: 20px 0; }
+.zuvly-overview p { color: var(--muted); font-size: 15px; line-height: 1.75; }
+@media(max-width:600px) {
+    .native-scene .project-backword,
+    .product-cover .native-scene .project-backword { top: 4%; left: 6%; font-size: 39px; }
+    .native-scene .scene-note { bottom: 4%; max-width: 60%; font-size: 24px; }
+    .native-scene .scene-tag { display: block; bottom: 12px; right: 12px; font-size: 8px; max-width: 110px; text-align: right; }
+    .zuvly-overview { grid-template-columns: 1fr; gap: 30px; margin-bottom: 40px; }
+    .zuvly-overview h2 { font-size: 29px; margin: 14px 0; }
+}
 @media(prefers-reduced-motion:reduce) {
     html {
     scroll-behavior:auto
