@@ -1344,3 +1344,23 @@ summary {
 
 }
 
+
+/* Approved personal identity and native Mac previews. */
+.wordmark { display: inline-flex; align-items: center; gap: 10px; }
+.wordmark .brand-icon { width: 36px; height: 36px; border-radius: 10px; flex: none; }
+.wordmark .brand-name { color: var(--ink); font-weight: 650; }
+.native-scene.mac-preview { background: #fff; }
+.native-scene.mac-preview .scene-render { object-fit: contain; }
+.native-scene.mac-preview .project-backword { color: #17232c; font-size: clamp(30px, 4vw, 48px); top: 5%; }
+.native-scene.mac-preview .scene-note { display: none; }
+.native-scene.mac-preview .scene-tag,
+.native-scene.mac-preview .open-project { color: #17232c; border-color: #17232c55; }
+@media(max-width: 600px) {
+    .wordmark { gap: 7px; }
+    .wordmark .brand-icon { width: 30px; height: 30px; border-radius: 8px; }
+    .native-scene.mac-preview,
+    .product-cover .native-scene.mac-preview { height: clamp(250px, 66vw, 400px); }
+    .native-scene.mac-preview .project-backword { font-size: 27px; }
+    .device-switch { gap: 8px; }
+    .device-switch button { padding: 7px 9px; }
+}

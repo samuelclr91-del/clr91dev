@@ -2,14 +2,15 @@
   function renderDevicePreview(container, device) {
     const image = container.querySelector('.scene-render');
     if (!image) return;
-    const source = device === 'duo' ? image.dataset.srcDuo : image.dataset.srcPhone;
+    const source = { phone: image.dataset.srcPhone, duo: image.dataset.srcDuo, mac: image.dataset.srcMac }[device];
     if (!source) return;
     container.dataset.currentDevice = device;
     if (image.getAttribute('src') !== source) image.src = source;
-    const deviceName = device === 'duo' ? 'iPhone Duo' : 'iPhone';
+    const deviceName = { phone: 'iPhone', duo: 'iPhone Duo', mac: 'Mac' }[device];
     const spanish = document.documentElement.lang === 'es';
     image.alt = `${container.dataset.previewName}${spanish ? ' en ' : ' on '}${deviceName}`;
     container.querySelector('.project-art')?.classList.toggle('duo-preview', device === 'duo');
+    container.querySelector('.project-art')?.classList.toggle('mac-preview', device === 'mac');
     container.querySelectorAll('[data-preview-device]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.previewDevice === device));
     });
