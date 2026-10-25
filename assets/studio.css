@@ -1232,6 +1232,41 @@ summary {
     top: 15px;
     transform: rotate(8deg);
 }
+.device-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    color: var(--muted);
+}
+.device-switch>div { display: flex; gap: 5px; }
+.device-switch button {
+    padding: 9px 13px;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    white-space: nowrap;
+    color: var(--muted);
+}
+.device-switch button[aria-pressed=true] {
+    color: var(--paper);
+    background: var(--ink);
+    border-color: var(--ink);
+}
+.native-scene.duo-preview .scene-render { object-fit: cover; }
+.native-scene.duo-preview .project-backword { font-size: clamp(35px, 5vw, 64px); }
+.native-scene.duo-preview .scene-note { bottom: 4%; font-size: clamp(20px, 2.4vw, 32px); }
+.bezly-scene.native-scene.duo-preview { background: #d7b76f; }
+.zuvly-scene.native-scene.duo-preview { background: #20182f; }
+@media(max-width:600px) {
+    .native-scene.duo-preview { height: clamp(290px, 74vw, 400px); }
+    .product-cover .native-scene.duo-preview { height: clamp(290px, 74vw, 400px); }
+    .native-scene.duo-preview .project-backword,
+    .product-cover .native-scene.duo-preview .project-backword { top: 5%; font-size: 30px; }
+    .native-scene.duo-preview .scene-note { font-size: 21px; bottom: 6%; }
+}
 .scrap-zuvly:hover { transform: rotate(3deg) translateY(-5px); }
 .native-scene { background: #11251f; }
 .native-scene .scene-render {

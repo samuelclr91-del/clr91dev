@@ -1,6 +1,6 @@
 # Imágenes de la web
 
-Las diez composiciones de esta actualización se han creado y exportado desde la aplicación Bezly para Mac, en formato PNG de 3840 × 2160. Los WebP de la web son copias optimizadas de esas exportaciones; no son renders generados por CSS ni por IA.
+Las trece composiciones de esta actualización se han creado y exportado desde la aplicación Bezly para Mac, en formato PNG de 3840 × 2160. Los WebP de la web son copias optimizadas de esas exportaciones; no son renders generados por CSS ni por IA.
 
 Los originales se conservan localmente en `artwork/exports/`, y las capturas nuevas del simulador en `artwork/sources/`. Estas carpetas se excluyen de Git para evitar subir decenas de megabytes de originales. Las versiones publicadas están en `assets/bezly-exports/`.
 
@@ -13,3 +13,7 @@ Los originales se conservan localmente en `artwork/exports/`, y las capturas nue
 Zuvly se presenta como proyecto en desarrollo y su imagen está identificada como demostración. No hay un enlace de descarga ficticio.
 
 El retrato `assets/samuel-portrait-2026.jpg` es la fotografía proporcionada por Samuel, sin retoques generativos.
+
+## iPhone Duo
+
+Se añaden tres mockups del Duo abierto en horizontal, exportados en Bezly y seleccionables en la portada y en la página de cada app. Trackle usa `AppStoreMetadata/4.0/raw/duo/es_4_home.png`; Bezly usa `fuentes/es-ES/duo-inner.png`; Zuvly usa una captura nueva de la pantalla interior del simulador con datos de demostración.

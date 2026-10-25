@@ -1,4 +1,22 @@
 (() => {
+  function renderDevicePreview(container, device) {
+    const image = container.querySelector('.scene-render');
+    if (!image) return;
+    const source = device === 'duo' ? image.dataset.srcDuo : image.dataset.srcPhone;
+    if (!source) return;
+    container.dataset.currentDevice = device;
+    if (image.getAttribute('src') !== source) image.src = source;
+    const deviceName = device === 'duo' ? 'iPhone Duo' : 'iPhone';
+    const spanish = document.documentElement.lang === 'es';
+    image.alt = `${container.dataset.previewName}${spanish ? ' en ' : ' on '}${deviceName}`;
+    container.querySelector('.project-art')?.classList.toggle('duo-preview', device === 'duo');
+    container.querySelectorAll('[data-preview-device]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.previewDevice === device));
+    });
+    const tag = container.querySelector('.scene-tag');
+    if (tag && container.dataset.previewName !== 'Zuvly') tag.textContent = deviceName;
+  }
+
   const languageButtons = document.querySelectorAll('[data-lang]');
   function applyLanguage(language) {
     document.documentElement.lang = language;
@@ -19,6 +37,9 @@
       description.content = description.dataset[language];
       document.querySelector('[property="og:description"]')?.setAttribute('content', description.content);
     }
+    document.querySelectorAll('[data-preview]').forEach(container => {
+      renderDevicePreview(container, container.dataset.currentDevice || 'phone');
+    });
     try { localStorage.setItem('clr91dev-site-language', language); } catch (_) {}
   }
   let initialLanguage = navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
@@ -28,6 +49,11 @@
   } catch (_) {}
   applyLanguage(initialLanguage);
   languageButtons.forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.lang)));
+  document.querySelectorAll('button[data-preview-device]').forEach(button => {
+    button.addEventListener('click', () => {
+      renderDevicePreview(button.closest('[data-preview]'), button.dataset.previewDevice);
+    });
+  });
 
   const menuButton = document.querySelector('.menu-toggle');
   const menuPanel = document.querySelector('.menu-panel');
