@@ -1,715 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clr91dev — Independent apps for iPhone</title>
-    <meta name="description" content="Independent iPhone apps by clr91dev. Discover Trackle and Bezly.">
-    <meta name="theme-color" content="#ffffff">
-
-    <meta property="og:title" content="clr91dev — Independent apps for iPhone">
-    <meta property="og:description" content="Focused, private tools for everyday life.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://samuelclr91-del.github.io/Trackle/">
-    <meta property="og:image" content="https://samuelclr91-del.github.io/Trackle/assets/clr91dev-header-4k.jpg">
-
-    <link rel="icon" type="image/png" href="./assets/clr91dev-mark-v2.png">
-    <link rel="apple-touch-icon" href="./assets/clr91dev-mark-v2.png">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --ink: #0a0a0a;
-            --paper: #ffffff;
-            --quiet: #727272;
-            --line: #ddddda;
-            --mint: #2ac6a8;
-            --navy: #0c1728;
-            --max: 1380px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--paper);
-            color: var(--ink);
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-
-        body.menu-open {
-            overflow: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            border: 0;
-            background: none;
-            color: inherit;
-            font: inherit;
-            cursor: pointer;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        .site-header {
-            position: relative;
-            z-index: 50;
-            height: 76px;
-            background: var(--paper);
-        }
-
-        .header-inner {
-            width: min(100%, var(--max));
-            height: 100%;
-            margin: 0 auto;
-            padding: 0 42px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 34px;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            flex: none;
-        }
-
-        .brand img {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-        }
-
-        .wordmark {
-            display: grid;
-            font-size: 16px;
-            font-weight: 900;
-            line-height: 0.82;
-            letter-spacing: 0.025em;
-            text-transform: uppercase;
-        }
-
-        .wordmark span:last-child {
-            letter-spacing: 0.16em;
-        }
-
-        .desktop-nav {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: clamp(20px, 2.6vw, 38px);
-        }
-
-        .desktop-nav a,
-        .language button {
-            position: relative;
-            padding: 8px 0;
-            color: #292929;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .desktop-nav a::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: 3px;
-            left: 0;
-            height: 1px;
-            background: currentColor;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform .25s ease;
-        }
-
-        .desktop-nav a:hover::after,
-        .desktop-nav a:focus-visible::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .language {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-left: 8px;
-        }
-
-        .language button {
-            color: #aaa;
-        }
-
-        .language button.active {
-            color: var(--ink);
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        .menu-button {
-            display: none;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .hero {
-            position: relative;
-            height: clamp(300px, 33.333vw, 620px);
-            overflow: hidden;
-            background: #e9eef2;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 62%;
-        }
-
-        .intro,
-        .about,
-        .app-launcher,
-        .footer-inner {
-            width: min(100%, var(--max));
-            margin: 0 auto;
-            padding-right: 42px;
-            padding-left: 42px;
-        }
-
-        .intro {
-            padding-top: clamp(100px, 12vw, 180px);
-            padding-bottom: clamp(64px, 8vw, 110px);
-        }
-
-        .section-label {
-            margin-bottom: 26px;
-            color: var(--quiet);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-
-        .intro h1 {
-            max-width: 1100px;
-            font-size: clamp(54px, 8vw, 118px);
-            line-height: .92;
-            letter-spacing: -.065em;
-            font-weight: 700;
-        }
-
-        .intro-copy {
-            max-width: 620px;
-            margin: 54px 0 0 auto;
-            color: #333;
-            font-size: clamp(18px, 2vw, 26px);
-            line-height: 1.5;
-        }
-
-        .about {
-            padding-bottom: clamp(110px, 14vw, 210px);
-            display: grid;
-            grid-template-columns: minmax(300px, .86fr) 1.14fr;
-            gap: clamp(48px, 8vw, 130px);
-            align-items: center;
-        }
-
-        .portrait-wrap {
-            overflow: hidden;
-            background: #ededeb;
-        }
-
-        .portrait-wrap img {
-            width: 100%;
-            height: auto;
-        }
-
-        .about-copy {
-            max-width: 650px;
-        }
-
-        .about-copy h2 {
-            font-size: clamp(46px, 6.5vw, 92px);
-            line-height: .94;
-            letter-spacing: -.055em;
-            font-weight: 700;
-        }
-
-        .about-copy p:not(.section-label) {
-            max-width: 580px;
-            margin-top: 34px;
-            color: #333;
-            font-size: clamp(18px, 2vw, 24px);
-            line-height: 1.6;
-        }
-
-        .app-launcher {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            padding-top: 8px;
-            padding-bottom: clamp(110px, 14vw, 210px);
-        }
-
-        .app-shortcut {
-            display: grid;
-            width: 112px;
-            justify-items: center;
-            gap: 12px;
-            padding: 12px 10px;
-            border-radius: 24px;
-            text-align: center;
-            transition: transform .2s ease, background .2s ease;
-        }
-
-        .app-shortcut:hover,
-        .app-shortcut:focus-visible {
-            transform: translateY(-3px);
-            background: #f4f4f2;
-        }
-
-        .app-shortcut:focus-visible,
-        .social-link:focus-visible {
-            outline: 2px solid var(--ink);
-            outline-offset: 4px;
-        }
-
-        .app-shortcut img {
-            width: 82px;
-            height: 82px;
-            border-radius: 21px;
-            object-fit: cover;
-            box-shadow: 0 12px 28px rgba(12, 23, 40, .14);
-        }
-
-        .app-shortcut span {
-            font-size: 14px;
-            font-weight: 800;
-            letter-spacing: -.015em;
-        }
-
-        footer {
-            background: white;
-        }
-
-        .footer-inner {
-            padding-top: 70px;
-            padding-bottom: 70px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 48px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .footer-brand p {
-            max-width: 390px;
-            margin-top: 24px;
-            color: var(--quiet);
-            font-size: 15px;
-            line-height: 1.65;
-        }
-
-        .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 11px;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-        }
-
-        .footer-column a {
-            display: block;
-            width: fit-content;
-            margin: 12px 0;
-            color: var(--quiet);
-            font-size: 14px;
-        }
-
-        .social-links {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 18px;
-        }
-
-        .footer-column .social-link {
-            display: inline-grid;
-            width: 42px;
-            height: 42px;
-            margin: 0;
-            place-items: center;
-            overflow: hidden;
-            border: 1px solid var(--line);
-            border-radius: 13px;
-            background: white;
-            box-shadow: 0 8px 22px rgba(12, 23, 40, .08);
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-
-        .footer-column .social-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 26px rgba(12, 23, 40, .13);
-        }
-
-        .social-link img {
-            width: 27px;
-            height: 27px;
-            object-fit: contain;
-        }
-
-        .social-link.threads {
-            border-color: #111;
-            background: #111;
-        }
-
-        .social-link.threads img {
-            width: 25px;
-            height: 25px;
-        }
-
-        .copyright {
-            width: min(100%, var(--max));
-            margin: 0 auto;
-            padding: 24px 42px 34px;
-            color: var(--quiet);
-            font-size: 12px;
-        }
-
-        .copyright a {
-            border-bottom: 1px solid currentColor;
-        }
-
-        @media (max-width: 900px) {
-            .header-inner {
-                padding: 0 20px;
-            }
-
-            .desktop-nav {
-                position: fixed;
-                inset: 76px 0 0;
-                display: none;
-                align-content: start;
-                padding: 50px 24px;
-                background: white;
-            }
-
-            .desktop-nav.open {
-                display: grid;
-            }
-
-            .desktop-nav a {
-                font-size: 28px;
-                letter-spacing: -.02em;
-                text-transform: none;
-            }
-
-            .desktop-nav .language {
-                padding: 24px 0 0;
-            }
-
-            .menu-button {
-                display: inline-flex;
-            }
-
-            .intro,
-            .about,
-            .app-launcher,
-            .footer-inner {
-                padding-right: 22px;
-                padding-left: 22px;
-            }
-
-            .intro h1 {
-                letter-spacing: -.05em;
-            }
-
-            .intro-copy {
-                margin-left: 0;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .portrait-wrap {
-                width: min(100%, 620px);
-            }
-
-            .app-launcher {
-                justify-content: center;
-                gap: 18px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column: 1 / -1;
-            }
-
-            .copyright {
-                padding-right: 22px;
-                padding-left: 22px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                transition-duration: .01ms !important;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="clr91dev — Small apps. Clear ideas." data-es="clr91dev — Apps pequeñas. Ideas claras." >clr91dev — Small apps. Clear ideas.</title>
+<meta name="description" content="Independent apps by Samuel. Discover Trackle and Bezly, thoughtfully made for iPhone and iPad." data-en="Independent apps by Samuel. Discover Trackle and Bezly, thoughtfully made for iPhone and iPad." data-es="Apps independientes creadas por Samuel. Descubre Trackle y Bezly, diseñadas con cuidado para iPhone y iPad.">
+<meta name="theme-color" content="#f5f4f0">
+<link rel="canonical" href="https://samuelclr91-del.github.io/Trackle/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="clr91dev — Small apps. Clear ideas.">
+<meta property="og:description" content="Independent apps by Samuel. Discover Trackle and Bezly, thoughtfully made for iPhone and iPad.">
+<meta property="og:url" content="https://samuelclr91-del.github.io/Trackle/">
+<meta property="og:image" content="https://samuelclr91-del.github.io/Trackle/assets/studio/trackle-ipad-home.webp">
+<link rel="icon" href="./assets/clr91dev-mark-v2.png">
+<link rel="apple-touch-icon" href="./assets/clr91dev-mark-v2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./assets/studio.css">
+<script src="./assets/studio.js" defer>
+</script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="#home" aria-label="clr91dev home">
-                <img src="./assets/clr91dev-mark-v2.png" alt="">
-                <span class="wordmark"><span>clr91</span><span>dev</span></span>
-            </a>
-
-            <nav class="desktop-nav" id="siteNav" aria-label="Primary navigation">
-                <a href="#apps" data-i18n="nav.apps">Apps</a>
-                <a href="#about" data-i18n="nav.about">About</a>
-                <a href="./trackle/">Trackle</a>
-                <a href="./bezly/">Bezly</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
-                <div class="language" aria-label="Language">
-                    <button class="active" data-lang="en">EN</button>
-                    <button data-lang="es">ES</button>
-                </div>
-            </nav>
-
-            <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero" id="home" aria-label="Iceland landscape">
-            <img
-                class="hero-image"
-                src="./assets/clr91dev-header-4k.jpg"
-                alt="Vestrahorn mountain and black sand beach in Iceland"
-            >
-        </section>
-
-        <section class="intro">
-            <p class="section-label" data-i18n="intro.label">Independent apps · Madrid</p>
-            <h1 data-i18n="intro.title">Small apps. Clear ideas. Built with care.</h1>
-            <p class="intro-copy" data-i18n="intro.text">clr91dev is the home for focused iPhone tools designed to make everyday tasks feel simpler, calmer and more visual.</p>
-        </section>
-
-        <section class="app-launcher" id="apps" aria-label="Apps">
-            <a class="app-shortcut" href="./trackle/" aria-label="View Trackle details">
-                <img src="./assets/trackle-app-icon.png" alt="">
-                <span>Trackle</span>
-            </a>
-            <a class="app-shortcut" href="./bezly/" aria-label="View Bezly details">
-                <img src="./bezly/assets/bezly-app-icon.jpg" alt="">
-                <span>Bezly</span>
-            </a>
-        </section>
-
-        <section class="about" id="about">
-            <figure class="portrait-wrap">
-                <img src="./assets/samuel-portrait-v2.jpg" alt="Portrait of Samuel" loading="lazy">
-            </figure>
-            <div class="about-copy">
-                <p class="section-label" data-i18n="about.label">About</p>
-                <h2 data-i18n="about.title">Samuel, independent iOS developer.</h2>
-                <p data-i18n="about.text">I design and build apps that combine useful ideas with calm interfaces. clr91dev is where I bring those projects together and share each new release.</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a class="brand" href="#home">
-                    <img src="./assets/clr91dev-mark-v2.png" alt="">
-                    <span class="wordmark"><span>clr91</span><span>dev</span></span>
-                </a>
-                <p data-i18n="footer.text">Independent iPhone apps built by Samuel with a focus on clarity, privacy and thoughtful design.</p>
-            </div>
-            <div class="footer-column">
-                <h3 data-i18n="footer.apps">Apps</h3>
-                <a href="./trackle/">Trackle</a>
-                <a href="./bezly/">Bezly</a>
-            </div>
-            <div class="footer-column">
-                <h3 data-i18n="footer.contact">Contact</h3>
-                <a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com</a>
-                <div class="social-links" aria-label="Social media">
-                    <a class="social-link instagram" href="https://www.instagram.com/clr91dev/" target="_blank" rel="noopener noreferrer" aria-label="clr91dev on Instagram" title="Instagram">
-                        <img src="./assets/instagram.png" alt="">
-                    </a>
-                    <a class="social-link threads" href="https://www.threads.com/@samuclr91" target="_blank" rel="noopener noreferrer" aria-label="samuclr91 on Threads" title="Threads">
-                        <img src="./assets/threads.png" alt="">
-                    </a>
-                </div>
-                <a href="./privacy/" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="./terms/" data-i18n="footer.terms">Terms of Use</a>
-            </div>
-        </div>
-        <div class="copyright">© 2026 clr91dev · <a href="https://unsplash.com/photos/a-black-sand-beach-meets-the-ocean-and-mountains-JIvq1eW9jUg" target="_blank" rel="noopener">Photo by Jonas Degener</a></div>
-    </footer>
-
-    <script>
-        const translations = {
-            en: {
-                "nav.apps": "Apps",
-                "nav.about": "About",
-                "nav.contact": "Contact",
-                "intro.label": "Independent apps · Madrid",
-                "intro.title": "Small apps. Clear ideas. Built with care.",
-                "intro.text": "clr91dev is the home for focused iPhone tools designed to make everyday tasks feel simpler, calmer and more visual.",
-                "about.label": "About",
-                "about.title": "Samuel, independent iOS developer.",
-                "about.text": "I design and build apps that combine useful ideas with calm interfaces. clr91dev is where I bring those projects together and share each new release.",
-                "trackle.status": "01 · Available on App Store",
-                "trackle.text": "Subscriptions, renewals and spending insights in one clear private dashboard.",
-                "trackle.link": "Explore Trackle",
-                "bezly.status": "02 · Available on App Store",
-                "bezly.text": "Create polished device mockups, videos and launch assets directly from your iPhone.",
-                "bezly.link": "Explore Bezly",
-                "features.label": "Inside Trackle",
-                "features.title": "Know what renews. Understand what you spend.",
-                "features.calendar.title": "A visual renewal calendar",
-                "features.calendar.text": "See upcoming charges, busy months and service icons before each payment arrives.",
-                "features.stats.title": "Clear spending statistics",
-                "features.stats.text": "Compare monthly and annual totals and understand every category without spreadsheets.",
-                "features.ai.title": "A private AI assistant",
-                "features.ai.text": "Ask what renews soon, what costs the most and where you may be able to save.",
-                "closing.title": "Your subscriptions, finally clear.",
-                "closing.link": "Open App Store",
-                "footer.text": "Independent iPhone apps built by Samuel with a focus on clarity, privacy and thoughtful design.",
-                "footer.apps": "Apps",
-                "footer.contact": "Contact",
-                "footer.privacy": "Privacy Policy",
-                "footer.terms": "Terms of Use"
-            },
-            es: {
-                "nav.apps": "Apps",
-                "nav.about": "Sobre mí",
-                "nav.contact": "Contacto",
-                "intro.label": "Apps independientes · Madrid",
-                "intro.title": "Apps pequeñas. Ideas claras. Hechas con cuidado.",
-                "intro.text": "clr91dev es el hogar de herramientas para iPhone diseñadas para hacer las tareas cotidianas más sencillas, tranquilas y visuales.",
-                "about.label": "Sobre mí",
-                "about.title": "Samuel, desarrollador iOS independiente.",
-                "about.text": "Diseño y desarrollo apps que combinan ideas útiles con interfaces tranquilas. clr91dev es el lugar donde reúno estos proyectos y comparto cada nuevo lanzamiento.",
-                "trackle.status": "01 · Disponible en App Store",
-                "trackle.text": "Suscripciones, renovaciones y estadísticas de gasto en un panel privado y claro.",
-                "trackle.link": "Explorar Trackle",
-                "bezly.status": "02 · Disponible en App Store",
-                "bezly.text": "Crea mockups de dispositivos, vídeos y recursos de lanzamiento directamente desde tu iPhone.",
-                "bezly.link": "Explorar Bezly",
-                "features.label": "Dentro de Trackle",
-                "features.title": "Sabe qué renueva. Entiende cuánto gastas.",
-                "features.calendar.title": "Un calendario visual de renovaciones",
-                "features.calendar.text": "Consulta próximos cobros, meses con más pagos e iconos de servicios antes de cada cargo.",
-                "features.stats.title": "Estadísticas de gasto claras",
-                "features.stats.text": "Compara totales mensuales y anuales y entiende cada categoría sin hojas de cálculo.",
-                "features.ai.title": "Un asistente IA privado",
-                "features.ai.text": "Pregunta qué renueva pronto, qué cuesta más y dónde podrías ahorrar.",
-                "closing.title": "Tus suscripciones, por fin claras.",
-                "closing.link": "Abrir App Store",
-                "footer.text": "Apps independientes para iPhone creadas por Samuel con atención a la claridad, la privacidad y el diseño.",
-                "footer.apps": "Apps",
-                "footer.contact": "Contacto",
-                "footer.privacy": "Política de privacidad",
-                "footer.terms": "Términos de uso"
-            }
-        };
-
-        let currentLanguage = "en";
-        const menuButton = document.getElementById("menuButton");
-        const siteNav = document.getElementById("siteNav");
-
-        function initialLanguage() {
-            try {
-                const saved = localStorage.getItem("clr91dev-site-language");
-                if (saved === "en" || saved === "es") return saved;
-            } catch (_) {}
-            return (navigator.language || "en").toLowerCase().startsWith("es") ? "es" : "en";
-        }
-
-        function applyLanguage(language) {
-            currentLanguage = language;
-            document.documentElement.lang = language;
-            const dictionary = translations[language] || translations.en;
-
-            document.querySelectorAll("[data-i18n]").forEach((node) => {
-                const key = node.dataset.i18n;
-                if (dictionary[key]) node.textContent = dictionary[key];
-            });
-
-            document.querySelectorAll("[data-localized-image]").forEach((image) => {
-                const source = image.dataset[language === "es" ? "srcEs" : "srcEn"];
-                if (source) image.src = source;
-            });
-
-            document.querySelectorAll("[data-lang]").forEach((button) => {
-                button.classList.toggle("active", button.dataset.lang === language);
-            });
-
-            try {
-                localStorage.setItem("clr91dev-site-language", language);
-            } catch (_) {}
-
-        }
-
-        document.querySelectorAll("[data-lang]").forEach((button) => {
-            button.addEventListener("click", () => applyLanguage(button.dataset.lang));
-        });
-
-        menuButton.addEventListener("click", () => {
-            const open = siteNav.classList.toggle("open");
-            document.body.classList.toggle("menu-open", open);
-            menuButton.setAttribute("aria-expanded", String(open));
-            menuButton.textContent = open ? "×" : "☰";
-        });
-
-        siteNav.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                siteNav.classList.remove("open");
-                document.body.classList.remove("menu-open");
-                menuButton.setAttribute("aria-expanded", "false");
-                menuButton.textContent = "☰";
-            });
-        });
-
-        applyLanguage(initialLanguage());
-    </script>
+<a class="skip-link" data-en="Skip to content" data-es="Saltar al contenido" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="wordmark" href="./" aria-label="clr91dev — home">clr91<span>dev</span>
+</a>
+<div class="header-links">
+<a class="desktop-only" href="#apps">
+<span data-en="Apps" data-es="Apps" >Apps</span>
+</a>
+<a class="desktop-only" href="#about">
+<span data-en="About" data-es="Sobre mí" >About</span>
+</a>
+<div class="language" aria-label="Language / Idioma">
+<button type="button" data-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-lang="es" aria-pressed="false">ES</button>
+</div>
+<button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" type="button">
+<span data-en="Menu" data-es="Menú" >Menu</span>
+<i aria-hidden="true">
+</i>
+</button>
+</div>
+</header>
+<div class="menu-panel" id="site-menu" hidden>
+<nav aria-label="Menu">
+<a href="./trackle/">Trackle ↗</a>
+<a href="./bezly/">Bezly ↗</a>
+<a href="#about">
+<span data-en="A little about me" data-es="Un poco sobre mí" >A little about me</span>
+</a>
+<a href="#contact">
+<span data-en="Let’s talk" data-es="Hablemos" >Let’s talk</span>
+</a>
+</nav>
+<div class="menu-bottom">
+<a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com ↗</a>
+<span data-en="Independent apps. Made in Madrid." data-es="Apps independientes. Hechas en Madrid." >Independent apps. Made in Madrid.</span>
+</div>
+</div>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-composition">
+<figure class="polaroid">
+<img src="./assets/samuel-portrait-v2.jpg" alt="Portrait of Samuel, independent app developer" data-alt-en="Portrait of Samuel, independent app developer" data-alt-es="Retrato de Samuel, desarrollador de apps independiente" class="" fetchpriority=high decoding="async" width="1229" height="848">
+<figcaption>Samuel.</figcaption>
+</figure>
+<span class="sticker sticker-one" aria-hidden="true">
+</span>
+<span class="sticker sticker-two" aria-hidden="true">
+</span>
+<div class="hero-note">
+<p class="handwritten" data-en="Ideas into apps." data-es="Ideas hechas apps." >Ideas into apps.</p>
+</div>
+<svg class="drawn-arrow" aria-hidden="true" viewBox="0 0 100 145" fill="none">
+<path d="M22 6C88 49 88 85 32 130M32 130L36 104M32 130L60 125" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<a class="scrap-app scrap-trackle" href="./trackle/" aria-label="Trackle">
+<img src="./assets/trackle-app-icon.png" alt="" data-alt-en="" data-alt-es="" class="" fetchpriority=high decoding="async" width="512" height="512">
+<span>Trackle ↗</span>
+</a>
+<a class="scrap-app scrap-bezly" href="./bezly/" aria-label="Bezly">
+<img src="./bezly/assets/bezly-app-icon.jpg" alt="" data-alt-en="" data-alt-es="" class="" fetchpriority=high decoding="async" width="1024" height="1024">
+<span>Bezly ↗</span>
+</a>
+<span class="little-cross" aria-hidden="true">✳</span>
+</div>
+<div class="hero-caption">
+<h1 id="hero-title">
+<strong data-en="Small apps. Clear ideas." data-es="Apps pequeñas. Ideas claras." >Small apps. Clear ideas.</strong>
+</h1>
+<span data-en="Designed &amp; built by Samuel · Madrid" data-es="Diseñadas y creadas por Samuel · Madrid" >Designed &amp; built by Samuel · Madrid</span>
+</div>
+<a class="hero-scroll" href="#apps">
+<span data-en="Explore my apps" data-es="Explora mis apps" >Explore my apps</span>
+<span aria-hidden="true">↓</span>
+</a>
+</section>
+<section class="work-gallery" id="apps" aria-labelledby="work-title">
+<div class="section-topline">
+<h2 data-en="Selected apps" data-es="Apps seleccionadas" id="work-title">Selected apps</h2>
+<span class="index-label">iPHONE & iPAD · 01—02</span>
+</div>
+<div class="project-rail" tabindex="0" role="region" aria-label="App gallery" data-label-en="App gallery" data-label-es="Galería de apps">
+<article class="project-card">
+<a class="project-art trackle-scene" href="./trackle/" aria-label="Explore Trackle" data-label-en="Explore Trackle" data-label-es="Explorar Trackle">
+<span class="project-backword" aria-hidden="true">Trackle</span>
+<img src="./assets/studio/trackle-ipad-home.webp" alt="Trackle on iPad" data-alt-en="Trackle on iPad" data-alt-es="Trackle en iPad" class="scene-ipad" loading=lazy decoding="async" width="1550" height="1106">
+<img src="./assets/studio/trackle-iphone-home.webp" alt="Trackle on iPhone" data-alt-en="Trackle on iPhone" data-alt-es="Trackle en iPhone" class="scene-phone" loading=lazy decoding="async" width="827" height="1700">
+<span class="scene-note" data-en="A little more clarity." data-es="Un poco más de claridad." >A little more clarity.</span>
+<span class="scene-tag">iPhone + iPad</span>
+<span class="open-project" aria-hidden="true">↗</span>
+</a>
+<div class="project-caption">
+<div>
+<h3>
+<a href="./trackle/">Trackle</a>
+</h3>
+<p data-en="Subscriptions, with a clear view." data-es="Tus suscripciones, con perspectiva." >Subscriptions, with a clear view.</p>
+</div>
+<a href="./trackle/">
+<span data-en="Explore app ↗" data-es="Explorar app ↗" >Explore app ↗</span>
+</a>
+</div>
+</article>
+<article class="project-card">
+<a class="project-art bezly-scene" href="./bezly/" aria-label="Explore Bezly" data-label-en="Explore Bezly" data-label-es="Explorar Bezly">
+<span class="project-backword" aria-hidden="true">Bezly</span>
+<img src="./assets/studio/bezly-workflow-ipad-04.webp" alt="Bezly on iPad" data-alt-en="Bezly on iPad" data-alt-es="Bezly en iPad" class="scene-ipad" loading=lazy decoding="async" width="1550" height="1163">
+<img src="./assets/studio/bezly-workflow-iphone-04.webp" alt="Bezly on iPhone" data-alt-en="Bezly on iPhone" data-alt-es="Bezly en iPhone" class="scene-phone" loading=lazy decoding="async" width="416" height="900">
+<span class="scene-note" data-en="Make it yours." data-es="Hazlo tuyo." >Make it yours.</span>
+<span class="scene-tag">iPhone + iPad</span>
+<span class="open-project" aria-hidden="true">↗</span>
+</a>
+<div class="project-caption">
+<div>
+<h3>
+<a href="./bezly/">Bezly</a>
+</h3>
+<p data-en="Your screenshots. Ready for the spotlight." data-es="Tus capturas. Listas para destacar." >Your screenshots. Ready for the spotlight.</p>
+</div>
+<a href="./bezly/">
+<span data-en="Explore app ↗" data-es="Explorar app ↗" >Explore app ↗</span>
+</a>
+</div>
+</article>
+</div>
+<div class="gallery-controls">
+<span class="gallery-count" aria-live="polite">01 / 02</span>
+<div class="gallery-progress" aria-hidden="true">
+<span>
+</span>
+</div>
+<button class="round-button" data-gallery-prev type="button" aria-label="Previous app" data-label-en="Previous app" data-label-es="App anterior">←</button>
+<button class="round-button" data-gallery-next type="button" aria-label="Next app" data-label-en="Next app" data-label-es="App siguiente">→</button>
+</div>
+</section>
+<section class="about-section" id="about">
+<p class="eyebrow" data-en="A little about me" data-es="Un poco sobre mí" >A little about me</p>
+<div class="about-copy">
+<h2 data-en="Useful ideas. Thoughtful design. A personal way of building." data-es="Ideas útiles. Diseño con intención. Una forma personal de crear." >Useful ideas. Thoughtful design. A personal way of building.</h2>
+<p data-en="I’m Samuel, an independent iOS developer in Madrid. I make focused apps that turn everyday tasks into simpler, calmer experiences. clr91dev is where those ideas come to life." data-es="Soy Samuel, desarrollador iOS independiente en Madrid. Creo apps que convierten las tareas del día a día en experiencias más sencillas y tranquilas. clr91dev es donde esas ideas cobran vida." >I’m Samuel, an independent iOS developer in Madrid. I make focused apps that turn everyday tasks into simpler, calmer experiences. clr91dev is where those ideas come to life.</p>
+<a class="underlined-link" href="mailto:clr91dev@gmail.com">
+<span data-en="Say hello" data-es="Salúdame" >Say hello</span>
+<span aria-hidden="true">↗</span>
+</a>
+<div class="about-signature" aria-hidden="true">Made with care, Samuel.</div>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<p class="eyebrow" data-en="A question, an idea, or just a hello?" data-es="¿Una pregunta, una idea o simplemente un hola?" >A question, an idea, or just a hello?</p>
+<a class="contact-title" href="mailto:clr91dev@gmail.com">
+<span data-en="Let’s talk." data-es="Hablemos." >Let’s talk.</span>
+<span class="contact-arrow" aria-hidden="true">↗</span>
+</a>
+<div class="contact-bottom">
+<a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com</a>
+<div class="social-links">
+<a href="https://www.instagram.com/clr91dev/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+<a href="https://www.threads.com/@samuclr91" target="_blank" rel="noopener noreferrer">Threads ↗</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<span>© 2026 clr91dev · <span data-en="Made with care in Madrid" data-es="Hecho con cuidado en Madrid" >Made with care in Madrid</span>
+</span>
+<div class="footer-legal">
+<a href="./privacy/">
+<span data-en="Privacy" data-es="Privacidad" >Privacy</span>
+</a>
+<a href="./terms/">
+<span data-en="Terms" data-es="Términos" >Terms</span>
+</a>
+<a href="./">
+<span data-en="Back to home ↑" data-es="Volver al inicio ↑" >Back to home ↑</span>
+</a>
+</div>
+</footer>
 </body>
 </html>

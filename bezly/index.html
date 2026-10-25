@@ -1,343 +1,218 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050706">
-  <meta name="description" content="Bezly convierte capturas y vídeos en mockups profesionales para App Store y redes sociales desde iPhone y iPad.">
-  <title>Bezly — Mockups profesionales para apps</title>
-  <link rel="icon" href="./assets/bezly-app-icon.jpg">
-  <link rel="stylesheet" href="../assets/app-page.css">
-  <link rel="stylesheet" href="./index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Bezly — Your apps. In their best light." data-es="Bezly — Tus apps. En su mejor versión." >Bezly — Your apps. In their best light.</title>
+<meta name="description" content="Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export." data-en="Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export." data-es="Convierte capturas y grabaciones en mockups de dispositivos desde tu iPhone y iPad. Del primer marco a la exportación final.">
+<meta name="theme-color" content="#f5f4f0">
+<link rel="canonical" href="https://samuelclr91-del.github.io/Trackle/bezly/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bezly — Your apps. In their best light.">
+<meta property="og:description" content="Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export.">
+<meta property="og:url" content="https://samuelclr91-del.github.io/Trackle/bezly/">
+<meta property="og:image" content="https://samuelclr91-del.github.io/Trackle/assets/studio/bezly-workflow-ipad-04.webp">
+<link rel="icon" href="../bezly/assets/bezly-app-icon.jpg">
+<link rel="apple-touch-icon" href="../bezly/assets/bezly-app-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/studio.css">
+<script src="../assets/studio.js" defer>
+</script>
 </head>
-<body class="bezly-showcase">
-  <header class="bezly-nav" aria-label="Navegación principal">
-    <a class="brand" href="../" aria-label="Volver a clr91dev">
-      <img src="../assets/clr91dev-mark-v2.png" alt="">
-      <span>clr91dev</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Secciones">
-      <a href="#flujo" data-i18n="nav_workflow">Cómo funciona</a>
-      <a href="#funciones" data-i18n="nav_features">Funciones</a>
-      <a href="#privacidad" data-i18n="nav_privacy">Privacidad</a>
-    </nav>
-
-    <div class="nav-actions">
-      <div class="language-switcher" aria-label="Idioma">
-        <button type="button" data-lang="es" aria-pressed="true">ES</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-      <a class="button button-small" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noreferrer" data-i18n="nav_download">Descargar</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="showcase-hero">
-      <div class="hero-copy reveal">
-        <div class="app-identity">
-          <img src="./assets/bezly-app-icon.jpg" alt="Icono de Bezly">
-          <div>
-            <strong>Bezly</strong>
-            <span data-i18n="app_tag">Mockup Studio</span>
-          </div>
-        </div>
-
-        <p class="eyebrow" data-i18n="hero_eyebrow">Un estudio de mockups completo para iPhone y iPad</p>
-        <h1 data-i18n="hero_title">Mockups de app, creados donde viven tus capturas.</h1>
-        <p class="hero-summary" data-i18n="hero_summary">Convierte capturas y grabaciones en recursos pulidos para App Store y redes desde iPhone y iPad.</p>
-
-        <div class="hero-actions">
-          <a class="button" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noreferrer" data-i18n="hero_cta">Descargar en App Store</a>
-          <a class="text-link" href="#flujo" data-i18n="hero_secondary">Ver cómo funciona <span aria-hidden="true">↓</span></a>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal" aria-label="Bezly en iPhone y iPad">
-        <div class="hero-orbit" aria-hidden="true"></div>
-        <img class="hero-ipad" src="./assets/workflow-ipad-05.png" alt="Bezly exportando un mockup en iPad">
-        <img class="hero-iphone" src="./assets/workflow-iphone-04.png" alt="Editor de mockups de Bezly en iPhone">
-      </div>
-    </section>
-
-    <section class="proof-strip reveal" aria-label="Características principales">
-      <div>
-        <strong>5</strong>
-        <span data-i18n="proof_devices">familias de dispositivos</span>
-      </div>
-      <div>
-        <strong>2</strong>
-        <span data-i18n="proof_media">formatos de entrada: foto y vídeo</span>
-      </div>
-      <div>
-        <strong>1</strong>
-        <span data-i18n="proof_place">flujo completo, sin salir del dispositivo</span>
-      </div>
-    </section>
-
-    <section class="workflow" id="flujo">
-      <div class="section-intro reveal">
-        <p class="eyebrow" data-i18n="workflow_eyebrow">Del archivo al resultado final</p>
-        <h2 data-i18n="workflow_title">Un flujo sencillo. Control preciso.</h2>
-        <p data-i18n="workflow_summary">El mismo proceso se adapta a la pantalla del iPhone y aprovecha el espacio extra del iPad.</p>
-      </div>
-
-      <article class="workflow-step reveal">
-        <div class="step-copy">
-          <span class="step-number">01</span>
-          <p class="eyebrow" data-i18n="step1_eyebrow">Empieza por el formato</p>
-          <h3 data-i18n="step1_title">Elige un dispositivo</h3>
-          <p data-i18n="step1_body">Crea para iPhone, iPad, Mac, Apple Watch o Apple TV desde un punto de partida limpio y reconocible.</p>
-        </div>
-        <div class="device-pair">
-          <img class="ipad-shot" src="./assets/workflow-ipad-01.png" alt="Selector de dispositivos de Bezly en iPad">
-          <img class="iphone-shot" src="./assets/workflow-iphone-01.png" alt="Selector de dispositivos de Bezly en iPhone">
-        </div>
-      </article>
-
-      <article class="workflow-step reverse reveal">
-        <div class="step-copy">
-          <span class="step-number">02</span>
-          <p class="eyebrow" data-i18n="step2_eyebrow">Encuadre preciso</p>
-          <h3 data-i18n="step2_title">Escoge el marco exacto</h3>
-          <p data-i18n="step2_body">Selecciona el modelo concreto para que la captura encaje con sus proporciones, bordes y cámara.</p>
-        </div>
-        <div class="device-pair">
-          <img class="ipad-shot" src="./assets/workflow-ipad-02.png" alt="Listado de iPad compatibles en Bezly">
-          <img class="iphone-shot" src="./assets/workflow-iphone-02.png" alt="Listado de iPhone compatibles en Bezly">
-        </div>
-      </article>
-
-      <article class="workflow-step reveal">
-        <div class="step-copy">
-          <span class="step-number">03</span>
-          <p class="eyebrow" data-i18n="step3_eyebrow">Menos preparación</p>
-          <h3 data-i18n="step3_title">Empieza rápido con plantillas</h3>
-          <p data-i18n="step3_body">Usa formatos preparados para App Store, Instagram, X y Threads o comienza desde cero.</p>
-        </div>
-        <div class="device-pair">
-          <img class="ipad-shot" src="./assets/workflow-ipad-03.png" alt="Plantillas de Bezly en iPad">
-          <img class="iphone-shot" src="./assets/workflow-iphone-03.png" alt="Plantillas de Bezly en iPhone">
-        </div>
-      </article>
-
-      <article class="workflow-step reverse reveal">
-        <div class="step-copy">
-          <span class="step-number">04</span>
-          <p class="eyebrow" data-i18n="step4_eyebrow">Tu composición</p>
-          <h3 data-i18n="step4_title">Ajusta cada detalle</h3>
-          <p data-i18n="step4_body">Combina fondos, orientación, escala y barra de estado. En iPad, el lienzo y los controles conviven sin estorbarse.</p>
-        </div>
-        <div class="device-pair">
-          <img class="ipad-shot" src="./assets/workflow-ipad-04.png" alt="Editor de Bezly en iPad">
-          <img class="iphone-shot" src="./assets/workflow-iphone-04.png" alt="Editor de Bezly en iPhone">
-        </div>
-      </article>
-
-      <article class="workflow-step reveal">
-        <div class="step-copy">
-          <span class="step-number">05</span>
-          <p class="eyebrow" data-i18n="step5_eyebrow">Salida correcta</p>
-          <h3 data-i18n="step5_title">Exporta listo para publicar</h3>
-          <p data-i18n="step5_body">Guarda en Fotos o Archivos, comparte por AirDrop y genera las dimensiones exactas que acepta App Store Connect.</p>
-        </div>
-        <div class="device-pair">
-          <img class="ipad-shot" src="./assets/workflow-ipad-05.png" alt="Exportación de Bezly en iPad">
-          <img class="iphone-shot" src="./assets/workflow-iphone-05.png" alt="Exportación de Bezly en iPhone">
-        </div>
-      </article>
-    </section>
-
-    <section class="features" id="funciones">
-      <div class="section-intro reveal">
-        <p class="eyebrow" data-i18n="features_eyebrow">Todo lo necesario, sin ruido</p>
-        <h2 data-i18n="features_title">Pensado para crear y entregar.</h2>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card reveal">
-          <span aria-hidden="true">9:41</span>
-          <h3 data-i18n="feature_status_title">Barra de estado</h3>
-          <p data-i18n="feature_status_body">Mantén la original o aplica una barra 9:41 limpia y coherente.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span aria-hidden="true">◐</span>
-          <h3 data-i18n="feature_background_title">Fondos flexibles</h3>
-          <p data-i18n="feature_background_body">Sólidos, degradados, imágenes o transparencia real.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span aria-hidden="true">↔</span>
-          <h3 data-i18n="feature_orientation_title">Vertical y apaisado</h3>
-          <p data-i18n="feature_orientation_body">Adapta el lienzo a cada publicación y dispositivo.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span aria-hidden="true">▶</span>
-          <h3 data-i18n="feature_video_title">Foto y vídeo</h3>
-          <p data-i18n="feature_video_body">Trabaja con capturas estáticas y grabaciones de pantalla.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span aria-hidden="true">PNG</span>
-          <h3 data-i18n="feature_png_title">Sin fondo</h3>
-          <p data-i18n="feature_png_body">Exporta el dispositivo aislado como PNG transparente.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span aria-hidden="true">✓</span>
-          <h3 data-i18n="feature_store_title">App Store Connect</h3>
-          <p data-i18n="feature_store_body">Genera archivos RGB con dimensiones compatibles.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="privacy-block reveal" id="privacidad">
-      <div>
-        <p class="eyebrow" data-i18n="privacy_eyebrow">Privacidad por diseño</p>
-        <h2 data-i18n="privacy_title">Tus capturas se quedan contigo.</h2>
-      </div>
-      <p data-i18n="privacy_body">La edición y la exportación se realizan en el dispositivo. No es necesario subir el contenido a un servidor para crear un mockup.</p>
-      <a class="text-link" href="./privacy/" data-i18n="privacy_link">Leer la política de privacidad <span aria-hidden="true">→</span></a>
-    </section>
-
-    <section class="final-cta reveal">
-      <img src="./assets/bezly-app-icon.jpg" alt="">
-      <div>
-        <p class="eyebrow">Bezly</p>
-        <h2 data-i18n="cta_title">De la captura al recurso final.</h2>
-        <p data-i18n="cta_body">Crea mockups profesionales sin mover el trabajo a otro dispositivo.</p>
-      </div>
-      <a class="button" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noreferrer" data-i18n="cta_button">Descargar en App Store</a>
-    </section>
-  </main>
-
-  <footer class="bezly-footer">
-    <div>
-      <strong>Bezly</strong>
-      <span>© 2026 clr91dev</span>
-    </div>
-    <nav aria-label="Enlaces legales">
-      <a href="./support/" data-i18n="footer_support">Soporte</a>
-      <a href="./privacy/" data-i18n="footer_privacy">Privacidad</a>
-      <a href="./terms/" data-i18n="footer_terms">Términos</a>
-    </nav>
-  </footer>
-
-  <script>
-    window.PAGE_TRANSLATIONS = {
-      es: {
-        nav_workflow: "Cómo funciona",
-        nav_features: "Funciones",
-        nav_privacy: "Privacidad",
-        nav_download: "Descargar",
-        app_tag: "Mockup Studio",
-        hero_eyebrow: "Un estudio de mockups completo para iPhone y iPad",
-        hero_title: "Mockups de app, creados donde viven tus capturas.",
-        hero_summary: "Convierte capturas y grabaciones en recursos pulidos para App Store y redes desde iPhone y iPad.",
-        hero_cta: "Descargar en App Store",
-        hero_secondary: "Ver cómo funciona ↓",
-        proof_devices: "familias de dispositivos",
-        proof_media: "formatos de entrada: foto y vídeo",
-        proof_place: "flujo completo, sin salir del dispositivo",
-        workflow_eyebrow: "Del archivo al resultado final",
-        workflow_title: "Un flujo sencillo. Control preciso.",
-        workflow_summary: "El mismo proceso se adapta a la pantalla del iPhone y aprovecha el espacio extra del iPad.",
-        step1_eyebrow: "Empieza por el formato",
-        step1_title: "Elige un dispositivo",
-        step1_body: "Crea para iPhone, iPad, Mac, Apple Watch o Apple TV desde un punto de partida limpio y reconocible.",
-        step2_eyebrow: "Encuadre preciso",
-        step2_title: "Escoge el marco exacto",
-        step2_body: "Selecciona el modelo concreto para que la captura encaje con sus proporciones, bordes y cámara.",
-        step3_eyebrow: "Menos preparación",
-        step3_title: "Empieza rápido con plantillas",
-        step3_body: "Usa formatos preparados para App Store, Instagram, X y Threads o comienza desde cero.",
-        step4_eyebrow: "Tu composición",
-        step4_title: "Ajusta cada detalle",
-        step4_body: "Combina fondos, orientación, escala y barra de estado. En iPad, el lienzo y los controles conviven sin estorbarse.",
-        step5_eyebrow: "Salida correcta",
-        step5_title: "Exporta listo para publicar",
-        step5_body: "Guarda en Fotos o Archivos, comparte por AirDrop y genera las dimensiones exactas que acepta App Store Connect.",
-        features_eyebrow: "Todo lo necesario, sin ruido",
-        features_title: "Pensado para crear y entregar.",
-        feature_status_title: "Barra de estado",
-        feature_status_body: "Mantén la original o aplica una barra 9:41 limpia y coherente.",
-        feature_background_title: "Fondos flexibles",
-        feature_background_body: "Sólidos, degradados, imágenes o transparencia real.",
-        feature_orientation_title: "Vertical y apaisado",
-        feature_orientation_body: "Adapta el lienzo a cada publicación y dispositivo.",
-        feature_video_title: "Foto y vídeo",
-        feature_video_body: "Trabaja con capturas estáticas y grabaciones de pantalla.",
-        feature_png_title: "Sin fondo",
-        feature_png_body: "Exporta el dispositivo aislado como PNG transparente.",
-        feature_store_title: "App Store Connect",
-        feature_store_body: "Genera archivos RGB con dimensiones compatibles.",
-        privacy_eyebrow: "Privacidad por diseño",
-        privacy_title: "Tus capturas se quedan contigo.",
-        privacy_body: "La edición y la exportación se realizan en el dispositivo. No es necesario subir el contenido a un servidor para crear un mockup.",
-        privacy_link: "Leer la política de privacidad →",
-        cta_title: "De la captura al recurso final.",
-        cta_body: "Crea mockups profesionales sin mover el trabajo a otro dispositivo.",
-        cta_button: "Descargar en App Store",
-        footer_support: "Soporte",
-        footer_privacy: "Privacidad",
-        footer_terms: "Términos"
-      },
-      en: {
-        nav_workflow: "How it works",
-        nav_features: "Features",
-        nav_privacy: "Privacy",
-        nav_download: "Download",
-        app_tag: "Mockup Studio",
-        hero_eyebrow: "A complete mockup studio for iPhone and iPad",
-        hero_title: "App mockups, built where the screenshots live.",
-        hero_summary: "Turn screenshots and recordings into polished App Store and social assets on iPhone and iPad.",
-        hero_cta: "Download on the App Store",
-        hero_secondary: "See how it works ↓",
-        proof_devices: "device families",
-        proof_media: "input formats: photo and video",
-        proof_place: "complete workflow, without leaving your device",
-        workflow_eyebrow: "From source file to final asset",
-        workflow_title: "A simple flow. Precise control.",
-        workflow_summary: "The same process fits the iPhone screen and makes full use of the extra space on iPad.",
-        step1_eyebrow: "Start with the format",
-        step1_title: "Pick a device",
-        step1_body: "Create for iPhone, iPad, Mac, Apple Watch or Apple TV from a clean, familiar starting point.",
-        step2_eyebrow: "Precise framing",
-        step2_title: "Choose the exact frame",
-        step2_body: "Select the exact model so the screenshot matches its proportions, edges and camera.",
-        step3_eyebrow: "Less setup",
-        step3_title: "Start fast with templates",
-        step3_body: "Use ready-made formats for the App Store, Instagram, X and Threads, or start from scratch.",
-        step4_eyebrow: "Your composition",
-        step4_title: "Compose every detail",
-        step4_body: "Combine backgrounds, orientation, scale and status bar. On iPad, canvas and controls stay comfortably side by side.",
-        step5_eyebrow: "The right output",
-        step5_title: "Export ready to publish",
-        step5_body: "Save to Photos or Files, share with AirDrop and generate the exact dimensions accepted by App Store Connect.",
-        features_eyebrow: "Everything needed, nothing noisy",
-        features_title: "Built to create and deliver.",
-        feature_status_title: "Status bar",
-        feature_status_body: "Keep the original or apply a clean, consistent 9:41 status bar.",
-        feature_background_title: "Flexible backgrounds",
-        feature_background_body: "Solid colors, gradients, images or true transparency.",
-        feature_orientation_title: "Portrait and landscape",
-        feature_orientation_body: "Adapt the canvas to every post and device.",
-        feature_video_title: "Photo and video",
-        feature_video_body: "Work with static screenshots and screen recordings.",
-        feature_png_title: "No background",
-        feature_png_body: "Export the device on its own as a transparent PNG.",
-        feature_store_title: "App Store Connect",
-        feature_store_body: "Generate RGB files with compatible dimensions.",
-        privacy_eyebrow: "Privacy by design",
-        privacy_title: "Your screenshots stay with you.",
-        privacy_body: "Editing and export happen on the device. Your content does not need to be uploaded to a server to create a mockup.",
-        privacy_link: "Read the privacy policy →",
-        cta_title: "From screenshot to final asset.",
-        cta_body: "Create professional mockups without moving the work to another device.",
-        cta_button: "Download on the App Store",
-        footer_support: "Support",
-        footer_privacy: "Privacy",
-        footer_terms: "Terms"
-      }
-    };
-  </script>
-  <script src="../assets/app-page.js"></script>
+<body class="product-page product-bezly">
+<a class="skip-link" data-en="Skip to content" data-es="Saltar al contenido" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="wordmark" href="../" aria-label="clr91dev — home">clr91<span>dev</span>
+</a>
+<div class="header-links">
+<a class="desktop-only" href="../#apps">
+<span data-en="Apps" data-es="Apps" >Apps</span>
+</a>
+<a class="desktop-only" href="../#about">
+<span data-en="About" data-es="Sobre mí" >About</span>
+</a>
+<div class="language" aria-label="Language / Idioma">
+<button type="button" data-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-lang="es" aria-pressed="false">ES</button>
+</div>
+<button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" type="button">
+<span data-en="Menu" data-es="Menú" >Menu</span>
+<i aria-hidden="true">
+</i>
+</button>
+</div>
+</header>
+<div class="menu-panel" id="site-menu" hidden>
+<nav aria-label="Menu">
+<a href="../trackle/">Trackle ↗</a>
+<a href="../bezly/">Bezly ↗</a>
+<a href="../#about">
+<span data-en="A little about me" data-es="Un poco sobre mí" >A little about me</span>
+</a>
+<a href="../#contact">
+<span data-en="Let’s talk" data-es="Hablemos" >Let’s talk</span>
+</a>
+</nav>
+<div class="menu-bottom">
+<a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com ↗</a>
+<span data-en="Independent apps. Made in Madrid." data-es="Apps independientes. Hechas en Madrid." >Independent apps. Made in Madrid.</span>
+</div>
+</div>
+<main id="main">
+<section class="product-intro">
+<div>
+<a class="product-name" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noopener noreferrer">
+<img src="../bezly/assets/bezly-app-icon.jpg" alt="" data-alt-en="" data-alt-es="" class="" fetchpriority=high decoding="async" width="1024" height="1024">
+<span>Bezly ↗</span>
+</a>
+<h1 data-en="Your apps. In their best light." data-es="Tus apps. En su mejor versión." >Your apps. In their best light.</h1>
+</div>
+<div class="intro-right">
+<p data-en="Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export." data-es="Convierte capturas y grabaciones en mockups de dispositivos desde tu iPhone y iPad. Del primer marco a la exportación final." >Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export.</p>
+<div class="product-actions">
+<a class="store-link" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noopener noreferrer">
+<span data-en="Download on the App Store" data-es="Descargar en App Store" >Download on the App Store</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="underlined-link" href="#features">
+<span data-en="Take a look ↓" data-es="Echa un vistazo ↓" >Take a look ↓</span>
+</a>
+</div>
+<p class="product-platform" data-en="Made for iPhone &amp; iPad" data-es="Hecha para iPhone y iPad" >Made for iPhone &amp; iPad</p>
+</div>
+</section>
+<div class="product-cover">
+<div class="project-art bezly-scene" >
+<span class="project-backword" aria-hidden="true">Bezly</span>
+<img src="../assets/studio/bezly-workflow-ipad-04.webp" alt="Bezly on iPad" data-alt-en="Bezly on iPad" data-alt-es="Bezly en iPad" class="scene-ipad" loading=lazy decoding="async" width="1550" height="1163">
+<img src="../assets/studio/bezly-workflow-iphone-04.webp" alt="Bezly on iPhone" data-alt-en="Bezly on iPhone" data-alt-es="Bezly en iPhone" class="scene-phone" loading=lazy decoding="async" width="416" height="900">
+<span class="scene-note" data-en="Make it yours." data-es="Hazlo tuyo." >Make it yours.</span>
+<span class="scene-tag">iPhone + iPad</span>
+</div>
+<div class="product-cover-caption">
+<span>Bezly / clr91dev</span>
+<span data-en="Actual app screens. iPhone + iPad." data-es="Pantallas reales de la app. iPhone + iPad." >Actual app screens. iPhone + iPad.</span>
+</div>
+</div>
+<section class="product-story">
+<p class="eyebrow" data-en="The idea" data-es="La idea" >The idea</p>
+<div class="story-copy">
+<h2 data-en="Your screenshots deserve a little more." data-es="Tus capturas merecen algo más." >Your screenshots deserve a little more.</h2>
+<p data-en="A complete mockup studio, wherever your ideas happen. Choose a device, make the composition your own and export an asset ready for the App Store or your next post." data-es="Un estudio de mockups completo, allí donde surjan tus ideas. Elige un dispositivo, crea tu composición y exporta un recurso listo para la App Store o tu próxima publicación." >A complete mockup studio, wherever your ideas happen. Choose a device, make the composition your own and export an asset ready for the App Store or your next post.</p>
+</div>
+</section>
+<section id="features" aria-label="App features" data-label-en="App features" data-label-es="Funciones de la app">
+<article class="feature-row">
+<div class="feature-copy">
+<p class="eyebrow" data-en="01 / Choose" data-es="01 / Elige" >01 / Choose</p>
+<h3 data-en="Start with the right device." data-es="Empieza por el dispositivo." >Start with the right device.</h3>
+<p data-en="Create for iPhone, iPad, Mac, Apple Watch or Apple TV from a clean, recognizable starting point." data-es="Crea para iPhone, iPad, Mac, Apple Watch o Apple TV desde un punto de partida limpio y reconocible." >Create for iPhone, iPad, Mac, Apple Watch or Apple TV from a clean, recognizable starting point.</p>
+<div class="feature-bits">
+<span data-en="5 device families" data-es="5 familias de dispositivos" >5 device families</span>
+<span data-en="Photo &amp; video" data-es="Foto y vídeo" >Photo &amp; video</span>
+</div>
+</div>
+<figure class="feature-media">
+<img src="../assets/studio/bezly-workflow-ipad-01.webp" alt="Bezly — Start with the right device." data-alt-en="Bezly — Start with the right device." data-alt-es="Bezly — Empieza por el dispositivo." class="ipad-image" loading=lazy decoding="async" width="1550" height="1163">
+</figure>
+</article>
+<article class="feature-row">
+<div class="feature-copy">
+<p class="eyebrow" data-en="02 / Frame" data-es="02 / Enmarca" >02 / Frame</p>
+<h3 data-en="Find the perfect fit." data-es="Encuentra el marco exacto." >Find the perfect fit.</h3>
+<p data-en="Choose the device model that fits your project. Make your app feel at home in a frame made for it." data-es="Escoge el modelo de dispositivo que encaja con tu proyecto. Presenta tu app en un marco hecho para ella." >Choose the device model that fits your project. Make your app feel at home in a frame made for it.</p>
+<div class="feature-bits">
+<span data-en="Device models" data-es="Modelos de dispositivos" >Device models</span>
+<span data-en="Portrait &amp; landscape" data-es="Vertical y apaisado" >Portrait &amp; landscape</span>
+</div>
+</div>
+<figure class="feature-media">
+<img src="../assets/studio/bezly-workflow-iphone-02.webp" alt="Bezly — Find the perfect fit." data-alt-en="Bezly — Find the perfect fit." data-alt-es="Bezly — Encuentra el marco exacto." class="phone-image" loading=lazy decoding="async" width="416" height="900">
+</figure>
+</article>
+<article class="feature-row">
+<div class="feature-copy">
+<p class="eyebrow" data-en="03 / Compose" data-es="03 / Compón" >03 / Compose</p>
+<h3 data-en="A head start for your ideas." data-es="Un punto de partida para tus ideas." >A head start for your ideas.</h3>
+<p data-en="Start with a template, then make it your own. Bring a screenshot or screen recording into the composition." data-es="Empieza con una plantilla y hazla tuya. Incorpora una captura o una grabación de pantalla a la composición." >Start with a template, then make it your own. Bring a screenshot or screen recording into the composition.</p>
+<div class="feature-bits">
+<span data-en="Ready-made templates" data-es="Plantillas listas" >Ready-made templates</span>
+<span data-en="Your own content" data-es="Tu propio contenido" >Your own content</span>
+</div>
+</div>
+<figure class="feature-media">
+<img src="../assets/studio/bezly-workflow-ipad-03.webp" alt="Bezly — A head start for your ideas." data-alt-en="Bezly — A head start for your ideas." data-alt-es="Bezly — Un punto de partida para tus ideas." class="ipad-image" loading=lazy decoding="async" width="1550" height="1163">
+</figure>
+</article>
+<article class="feature-row">
+<div class="feature-copy">
+<p class="eyebrow" data-en="04 / Make it yours" data-es="04 / Hazlo tuyo" >04 / Make it yours</p>
+<h3 data-en="The difference is in the details." data-es="La diferencia está en los detalles." >The difference is in the details.</h3>
+<p data-en="Adjust the frame, background and layout. Keep your status bar or use a clean 9:41. Choose a solid, gradient, image or transparent background." data-es="Ajusta el marco, el fondo y la composición. Mantén tu barra de estado o usa una limpia a las 9:41. Elige un fondo sólido, degradado, una imagen o transparencia." >Adjust the frame, background and layout. Keep your status bar or use a clean 9:41. Choose a solid, gradient, image or transparent background.</p>
+<div class="feature-bits">
+<span data-en="Custom backgrounds" data-es="Fondos personalizados" >Custom backgrounds</span>
+<span data-en="Clean status bar" data-es="Barra de estado limpia" >Clean status bar</span>
+</div>
+</div>
+<figure class="feature-media">
+<img src="../assets/studio/bezly-workflow-ipad-04.webp" alt="Bezly — The difference is in the details." data-alt-en="Bezly — The difference is in the details." data-alt-es="Bezly — La diferencia está en los detalles." class="ipad-image" loading=lazy decoding="async" width="1550" height="1163">
+</figure>
+</article>
+<article class="feature-row">
+<div class="feature-copy">
+<p class="eyebrow" data-en="05 / Share" data-es="05 / Comparte" >05 / Share</p>
+<h3 data-en="Ready for the spotlight." data-es="Listo para destacar." >Ready for the spotlight.</h3>
+<p data-en="Export your final composition, a transparent PNG or RGB assets in App Store Connect dimensions. All from the same device." data-es="Exporta tu composición final, un PNG transparente o recursos RGB con dimensiones de App Store Connect. Todo desde el mismo dispositivo." >Export your final composition, a transparent PNG or RGB assets in App Store Connect dimensions. All from the same device.</p>
+<div class="feature-bits">
+<span data-en="Transparent PNG" data-es="PNG transparente" >Transparent PNG</span>
+<span data-en="App Store Connect" data-es="App Store Connect" >App Store Connect</span>
+</div>
+</div>
+<figure class="feature-media">
+<img src="../assets/studio/bezly-workflow-iphone-05.webp" alt="Bezly — Ready for the spotlight." data-alt-en="Bezly — Ready for the spotlight." data-alt-es="Bezly — Listo para destacar." class="phone-image" loading=lazy decoding="async" width="416" height="900">
+</figure>
+</article>
+</section>
+<section class="privacy-section" id="privacy">
+<p class="eyebrow" data-en="Privacy, by design" data-es="Privacidad, desde el diseño" >Privacy, by design</p>
+<div>
+<h2 data-en="Your screenshots stay with you." data-es="Tus capturas se quedan contigo." >Your screenshots stay with you.</h2>
+<p data-en="Editing and export happen on your device. You don’t need to upload your content to a server to create a mockup." data-es="La edición y la exportación se realizan en tu dispositivo. No necesitas subir tu contenido a un servidor para crear un mockup." >Editing and export happen on your device. You don’t need to upload your content to a server to create a mockup.</p>
+<a class="underlined-link" href="./privacy/">
+<span data-en="Read the privacy policy ↗" data-es="Leer la política de privacidad ↗" >Read the privacy policy ↗</span>
+</a>
+</div>
+</section>
+<section class="product-cta">
+<h2 data-en="From screenshot to something special." data-es="De una captura a algo especial." >From screenshot to something special.</h2>
+<a class="store-link" href="https://apps.apple.com/app/id6793517767" target="_blank" rel="noopener noreferrer">
+<span data-en="Get Bezly ↗" data-es="Descargar Bezly ↗" >Get Bezly ↗</span>
+</a>
+</section>
+</main>
+<a class="next-project" href="../trackle/">
+<span data-en="Discover the next app" data-es="Descubre la siguiente app" >Discover the next app</span>
+<strong>Trackle ↗</strong>
+</a>
+<footer class="site-footer">
+<span>© 2026 clr91dev · <span data-en="Made with care in Madrid" data-es="Hecho con cuidado en Madrid" >Made with care in Madrid</span>
+</span>
+<div class="footer-legal">
+<a href="./support/">
+<span data-en="Support" data-es="Soporte" >Support</span>
+</a>
+<a href="./privacy/">
+<span data-en="Privacy" data-es="Privacidad" >Privacy</span>
+</a>
+<a href="./terms/">
+<span data-en="Terms" data-es="Términos" >Terms</span>
+</a>
+<a href="../">
+<span data-en="Back to home ↑" data-es="Volver al inicio ↑" >Back to home ↑</span>
+</a>
+</div>
+</footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Bezly", "applicationCategory": "DesignApplication", "operatingSystem": "iOS, iPadOS", "url": "https://samuelclr91-del.github.io/Trackle/bezly/", "downloadUrl": "https://apps.apple.com/app/id6793517767", "description": "Turn screenshots and recordings into polished device mockups, right on your iPhone and iPad. From the first frame to the final export."}</script>
 </body>
 </html>
