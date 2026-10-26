@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackle — Privacy Policy</title>
+    <meta name="theme-color" content="#007AFF">
+    <link rel="icon" href="../../assets/trackle-app-icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --accent: #007AFF;
+            --accent-light: #5AC8FA;
+            --bg: #F2F1EE;
+            --text: #0B1220;
+            --text-muted: #5C6678;
+            --border: rgba(11, 18, 32, 0.08);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0, 122, 255, 0.3);
+        }
+        .logo-text { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); text-decoration: none; }
+        .lang-toggle {
+            display: flex;
+            background: rgba(11, 18, 32, 0.05);
+            border-radius: 8px;
+            padding: 3px;
+        }
+        .lang-toggle button {
+            padding: 6px 12px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .lang-toggle button.active {
+            background: white;
+            color: var(--text);
+            box-shadow: 0 2px 8px rgba(11, 18, 32, 0.06);
+        }
+        h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 8px; line-height: 1.1; }
+        .date { font-size: 14px; color: var(--text-muted); margin-bottom: 36px; }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+        h3 { font-size: 16px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; }
+        p, li { font-size: 16px; color: #2a3242; margin-bottom: 12px; }
+        ul { padding-left: 22px; margin-bottom: 14px; }
+        li { margin-bottom: 6px; }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin: 24px 0;
+            box-shadow: 0 2px 12px rgba(11, 18, 32, 0.04);
+            border: 1px solid var(--border);
+        }
+        .card p:last-child { margin-bottom: 0; }
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.08), rgba(90, 200, 250, 0.05));
+            border-left: 3px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+        .highlight p { margin-bottom: 0; color: var(--text); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .footer a { color: var(--text-muted); }
+        @media (max-width: 480px) {
+            .container { padding: 36px 18px 60px; }
+            h1 { font-size: 28px; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/studio-legal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <a href="../" class="logo" style="text-decoration:none;">
+                <img class="logo-icon" src="../../assets/trackle-app-icon.png" alt="">
+                <span class="logo-text">Trackle</span>
+            </a>
+            <div class="lang-toggle" role="group" aria-label="Language">
+                <button data-lang="en" class="active">EN</button>
+                <button data-lang="es">ES</button>
+            </div>
+        </div>
+
+        <h1 data-i18n="title">Privacy Policy</h1>
+        <p class="date"><span data-i18n="updated">Last updated:</span> <span data-i18n="date">April 13, 2026</span></p>
+
+        <div class="highlight">
+            <p><strong data-i18n="summary.label">In short:</strong> <span data-i18n="summary.body">Trackle does not collect, store, or share your personal data. Everything stays on your device.</span></p>
+        </div>
+
+        <h2 data-i18n="s1.title">1. Data we collect</h2>
+        <p data-i18n="s1.p1">Trackle does not collect personal data. All information you enter into the app (subscriptions, prices, categories, user profiles) is stored exclusively on your device using local storage.</p>
+        <p data-i18n="s1.p2">We do not use our own servers, nor third-party servers, to process or store your information.</p>
+
+        <h2 data-i18n="s2.title">2. Apple Intelligence</h2>
+        <p data-i18n="s2.p1">Trackle uses Apple Intelligence to power its financial-analysis assistant. This processing runs entirely on your device using Apple's on-device foundation model. No data is sent to external servers for this purpose.</p>
+        <p data-i18n="s2.p2">On devices that don't support Apple Intelligence, the assistant falls back to a local rules-based engine — also without any server connection.</p>
+
+        <h2 data-i18n="s3.title">3. Purchase data</h2>
+        <p data-i18n="s3.p1">Subscriptions and in-app purchases are handled exclusively by Apple and the App Store. Trackle has no access to your payment information, credit card, or billing data. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> for more details.</p>
+
+        <h2 data-i18n="s4.title">4. Anonymous analytics (optional)</h2>
+        <p data-i18n="s4.p1">Trackle offers the option to share fully anonymous usage data and crash reports. This feature:</p>
+        <ul>
+            <li><span data-i18n="s4.li1.a">Is</span> <strong data-i18n="s4.li1.b">disabled by default</strong></li>
+            <li data-i18n="s4.li2">Is fully optional and can be turned on or off any time from Settings</li>
+            <li data-i18n="s4.li3">Does not include personal data, subscription names, or amounts</li>
+            <li data-i18n="s4.li4">Is used solely to detect bugs and improve the app</li>
+        </ul>
+
+        <h2 data-i18n="s5.title">5. Third-party services</h2>
+        <p data-i18n="s5.p1">Trackle uses the following services to display icons for your subscriptions:</p>
+        <ul>
+            <li><strong>iTunes Search API</strong> <span data-i18n="s5.li1">(Apple): to fetch app icons</span></li>
+            <li><strong>DuckDuckGo Icons</strong><span data-i18n="s5.li2">: to fetch website favicons</span></li>
+        </ul>
+        <p data-i18n="s5.p2">These requests are made to look up icons and do not transmit personal data.</p>
+
+        <h2 data-i18n="s6.title">6. Children's data</h2>
+        <p data-i18n="s6.p1">Trackle is not directed at children under 13 and does not knowingly collect data from minors. If you are a parent or guardian and believe your child has provided information, please contact us so we can take the necessary action.</p>
+
+        <h2 data-i18n="s7.title">7. Security</h2>
+        <p data-i18n="s7.p1">Because no data is transmitted to or stored on external servers, the risk of a data leak is minimal. Your information is protected by the security features of your own Apple device (Face ID, passcode, disk encryption).</p>
+
+        <h2 data-i18n="s8.title">8. Changes to this policy</h2>
+        <p data-i18n="s8.p1">We reserve the right to update this privacy policy. Any changes will be published on this page with the corresponding update date. We recommend reviewing it periodically.</p>
+
+        <h2 data-i18n="s9.title">9. Contact</h2>
+        <div class="card">
+            <p data-i18n="s9.p1">If you have questions about this privacy policy, you can reach us at:</p>
+            <p><strong data-i18n="s9.email">Email:</strong> <a href="mailto:clr91dev@gmail.com">clr91dev@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Trackle — Clr91dev</p>
+            <p style="margin-top: 8px;">
+                <a href="../../terms.html" data-i18n="footer.terms">Terms of Use</a> &nbsp;·&nbsp;
+                <a href="./" data-i18n="footer.privacy">Privacy</a> &nbsp;·&nbsp;
+                <a href="../" data-i18n="footer.home">Home</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const t = {
+            en: {}, // English values are already in the HTML
+            es: {
+                'title': 'Política de Privacidad',
+                'updated': 'Última actualización:',
+                'date': '13 de abril de 2026',
+                'summary.label': 'En resumen:',
+                'summary.body': 'Trackle no recopila, almacena ni comparte tus datos personales. Todo permanece en tu dispositivo.',
+
+                's1.title': '1. Datos que recopilamos',
+                's1.p1': 'Trackle no recopila datos personales. Toda la información que introduces en la app (suscripciones, precios, categorías, perfiles de usuario) se almacena exclusivamente en tu dispositivo mediante almacenamiento local.',
+                's1.p2': 'No utilizamos servidores propios ni de terceros para procesar o almacenar tu información.',
+
+                's2.title': '2. Apple Intelligence',
+                's2.p1': 'Trackle utiliza Apple Intelligence para potenciar su asistente de análisis financiero. Este procesamiento se realiza íntegramente en tu dispositivo mediante el modelo fundacional on-device de Apple. Ningún dato se envía a servidores externos para este fin.',
+                's2.p2': 'En dispositivos no compatibles con Apple Intelligence, el asistente funciona con un motor local basado en reglas, igualmente sin conexión a servidores.',
+
+                's3.title': '3. Datos de compra',
+                's3.p1': 'Las suscripciones y compras dentro de la app se gestionan exclusivamente a través de Apple y el App Store. Trackle no tiene acceso a tu información de pago, tarjeta de crédito ni datos de facturación. Puedes consultar la <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidad de Apple</a> para más información.',
+
+                's4.title': '4. Análisis anónimos (opcional)',
+                's4.p1': 'Trackle ofrece la opción de compartir datos de uso completamente anónimos y registros de errores. Esta función:',
+                's4.li1.a': 'Está',
+                's4.li1.b': 'desactivada por defecto',
+                's4.li2': 'Es totalmente opcional y puedes activarla o desactivarla en cualquier momento desde Ajustes',
+                's4.li3': 'No incluye datos personales, nombres de suscripciones ni importes',
+                's4.li4': 'Se utiliza exclusivamente para detectar fallos y mejorar la app',
+
+                's5.title': '5. Servicios de terceros',
+                's5.p1': 'Trackle utiliza los siguientes servicios para mostrar iconos de tus suscripciones:',
+                's5.li1': '(Apple): para obtener iconos de apps',
+                's5.li2': ': para obtener favicons de sitios web',
+                's5.p2': 'Estas peticiones se realizan para buscar iconos y no transmiten datos personales.',
+
+                's6.title': '6. Datos de menores',
+                's6.p1': 'Trackle no está dirigida a menores de 13 años y no recopila conscientemente datos de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado información, contacta con nosotros para que podamos tomar las medidas necesarias.',
+
+                's7.title': '7. Seguridad',
+                's7.p1': 'Al no transmitir ni almacenar datos en servidores externos, el riesgo de filtración de datos es mínimo. Tu información queda protegida por las medidas de seguridad de tu propio dispositivo Apple (Face ID, código de acceso, cifrado de disco).',
+
+                's8.title': '8. Cambios en esta política',
+                's8.p1': 'Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será publicado en esta página con la fecha de actualización correspondiente. Te recomendamos revisarla periódicamente.',
+
+                's9.title': '9. Contacto',
+                's9.p1': 'Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en:',
+                's9.email': 'Email:',
+
+                'footer.terms': 'Términos de uso',
+                'footer.privacy': 'Privacidad',
+                'footer.home': 'Inicio'
+            }
+        };
+
+        // Save the original English text on first load so we can restore it.
+        const originals = {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            originals[el.getAttribute('data-i18n')] = el.innerHTML;
+        });
+
+        function applyLang(lang) {
+            const dict = lang === 'es' ? t.es : null;
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict && dict[key]) {
+                    el.innerHTML = dict[key];
+                } else {
+                    el.innerHTML = originals[key];
+                }
+            });
+            document.querySelectorAll('.lang-toggle button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            try { localStorage.setItem('trackle.lang', lang); } catch (_) {}
+        }
+
+        function detectLang() {
+            try {
+                const saved = localStorage.getItem('trackle.lang');
+                if (saved === 'en' || saved === 'es') return saved;
+            } catch (_) {}
+            return (navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+        }
+
+        document.querySelectorAll('.lang-toggle button').forEach(btn => {
+            btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+        });
+
+        applyLang(detectLang());
+    </script>
+</body>
+</html>
