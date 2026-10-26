@@ -1,6 +1,6 @@
 # clr91dev
 
-Portfolio de Samuel y páginas de Trackle y Bezly. Sitio estático publicado con GitHub Pages desde la rama `main`, sin dependencias ni proceso de compilación.
+Portfolio de Samuel y páginas de Trackle, Bezly y Zuvly. Sitio estático publicado con GitHub Pages desde la rama `main`, sin dependencias ni proceso de compilación.
 
 ## Vista previa
 
@@ -25,3 +25,9 @@ Abre `http://127.0.0.1:4173` en tu navegador.
 Los textos en inglés y español se editan en los atributos `data-en` y `data-es`. Las descripciones de imágenes usan `data-alt-en` y `data-alt-es`. El sitio usa el idioma del navegador y recuerda la selección del visitante. Las capturas muestran los idiomas de los mockups originales.
 
 El diseño utiliza DM Sans y Caveat de Google Fonts, con fuentes locales de respaldo. El menú se cierra con Escape; la galería admite flechas, teclado y desplazamiento táctil. Se respeta la preferencia de movimiento reducido.
+
+## Dirección pública
+
+https://samuelclr91-del.github.io/clr91dev/
+
+Privacidad de Zuvly (español e inglés): https://samuelclr91-del.github.io/clr91dev/zuvly/privacy/
